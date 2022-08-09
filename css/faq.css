@@ -1,0 +1,59 @@
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+.faq-more-questions {
+    color: #5f578a;
+    font-weight: 900;
+}
+
+.faq-contactUs-button {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-right: 15px 10px;
+    background-color: #453f65;
+    border-radius: 3px;
+    border: none;
+}
+
+.faq-contactUs-button:hover {
+    background-color: #5f578a
+}
+
+.faq-contactUs-button a {
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 5px;
+    transition: margin-right .5s linear ;
+}
+
+.faq-contactUs-button a:hover {
+    margin-right: 15px;
+}
+
+.faq-contactUs-button i {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
