@@ -1,11 +1,74 @@
 [
-    {
-      "name": "pet 1"
-    },
-    {
-      "name": "pet 2"
-    },
-    {
-      "name": "pet 3"
-    }
-  ]
+  {
+    "type": "dog",
+    "name": "Max",
+    "age": "1 year",
+    "breed": "Mixed",
+    "location": "Manizales",
+    "status": "Available",
+    "whatsapp": "+51950302674",
+    "photos": [
+
+    ]
+  },
+  {
+    "type": "cat",
+    "name": "Michael",
+    "age": "1 year",
+    "breed": "Mixed",
+    "location": "Manizales",
+    "status": "Available",
+    "whatsapp": "+51950302674",
+    "photos": [
+
+    ]
+  },
+  {
+    "type": "dog",
+    "name": "Rex",
+    "age": "8 years",
+    "breed": "Mixed",
+    "location": "Bogotá",
+    "status": "Available",
+    "whatsapp": "+51950302674",
+    "photos": [
+
+    ]
+  },
+  {
+    "type": "cat",
+    "name": "Copo",
+    "age": "8 years",
+    "breed": "Mixed",
+    "location": "Bogotá",
+    "status": "Available",
+    "whatsapp": "+51950302674",
+    "photos": [
+
+    ]
+  },
+  {
+    "type": "Apollo",
+    "name": "Max",
+    "age": "2 years",
+    "breed": "Jack Rusell",
+    "location": "Medellín",
+    "status": "Available",
+    "whatsapp": "+51950302674",
+    "photos": [
+
+    ]
+  },
+  {
+    "type": "Luna",
+    "name": "Max",
+    "age": "2 years",
+    "breed": "Mixed",
+    "location": "Medllín",
+    "status": "Available",
+    "whatsapp": "+51950302674",
+    "photos": [
+
+    ]
+  }
+]
