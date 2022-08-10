@@ -1,14 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelter Pet Tinder - Home</title>
-</head>
+		<!--Estilos propios-->
+		<link rel="stylesheet" href="css/main.css" />
+		<link
+			rel="shortcut icon"
+			href="images/icons8-impresión-de-la-pata-del-perro-24.png"
+			type="image/x-icon"
+		/>
+		
+		<!-- ===== Fonts ===== -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- ===== BOX ICONS ===== -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+		/>
+		<title>Shelter-pet App</title>
+	</head>
+	<body>
+		<!--=============== HEADER ===============-->
+		<header class="header" id="header">
+			<nav class="nav container">
+				<a href="#" class="nav__logo">
+					<i class="bx bxs-home-heart"></i>Shelter-pet
+				</a>
 
-<body>
-</body>
+				<div class="nav__menu" id="nav-menu">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#home" class="nav__link active-link">Home</a>
+						</li>
+						<li class="nav__item">
+							<a href="#all" class="nav__link">All</a>
+						</li>
+						<li class="nav__item">
+							<a href="#Dogs" class="nav__link">Dogs</a>
+						</li>
+						<li class="nav__item">
+							<a href="#cats" class="nav__link">Cats</a>
+						</li>
+						<li class="nav__item">
+							<a href="#adopted" class="nav__link">Adopted</a>
+						</li>
+						<li class="nav__item">
+							<a href="#addPets" class="nav__link">Add Pets</a>
+						</li>
+						<li class="nav__item">
+							<a href="#login" class="nav__link">Login</a>
+						</li>
+						<li class="nav__item">
+							<a href="#signup" class="nav__link">Signup</a>
+						</li>
+					</ul>
 
+					<div class="nav__close" id="nav-close">
+						<i class="uil uil-times"></i>
+					</div>
+				</div>
+
+				<div class="nav__btns">
+					<!-- Theme change button -->
+					<!-- <i class="uil uil-moon" id="theme-button"></i>  -->
+
+					<div class="nav__toggle" id="nav-toggle">
+						<i class="uil uil-bars"></i>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main class="main">
+			<!--==================== HOME ====================-->
+			<section class="home" id="home">
+				<div class="home__container container grid">
+					<img src="images/pexels-sergio-souza-3198004.jpg" alt="" class="home__img">
+					<div class="home__data">
+						<h1 class="home__title">
+							Pets will make <br> your life better
+						</h1>
+						<p class="home__description">
+							Adopting a pet is more than just taking on responsibility. It is learning to love and care about someone else. Having a pet makes us less selfish and teaches us to give our best, for the good of another being.
+						</p>
+						<a href="#about" class="button button--flex">
+							Contact Us<i class="uil uil-arrow-down-right button__icon"></i>
+						</a>
+					</div>
+		</main>
+		<!--===== MAIN JS =====-->
+		<script src="js/main.js"></script>
+	</body>
 </html>
