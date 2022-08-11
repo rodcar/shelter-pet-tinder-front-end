@@ -35,11 +35,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
         loadPet(petIndex);
     }
 
+    // it obtains the query parameter 'type'. example: dog or cat
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    let petType = params.type;
+
     // load the first pet
     fetch('https://rodcar.github.io/shelter-pet-tinder-front-end/data/pets.json').then(response => {
         return response.json();
     }).then(jsonData => {
-        petsData = jsonData;
+        if (petType == null) {
+            petsData = jsonData;
+        } else {
+            petsData = jsonData.filter(pet => pet.type == petType);
+        }
         loadPet(petIndex);
     });
 
