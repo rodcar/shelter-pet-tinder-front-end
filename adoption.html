@@ -91,27 +91,37 @@
         <main class="main">
 			<!--==================== HOME ====================-->
 			<section class="home" id="home">
-				<div class="home__container container grid">
+				<div class="adoption__container container grid">
+                    <div id="button-before"><i class='bx bxs-left-arrow'></i></div>
+                    <div id="button-next"><i class='bx bxs-right-arrow' ></i></div>
                     <img src="" alt="" class="pet-carousel" id="pet-carousel-adopted">
                     <p class="pet-name" id="pet-name-adopted">Pet's Name</p>
-                    <div class="pet-info">
-                        <div class="pet-detail">
-                            <p id="pet-age"></p>
+                    <div id="pet-info">
+                        <div class="bigbox">
+                            <div class="pet-detail">
+                                <p class="detail-title">Age</p>
+                                <p id="pet-age"></p>
+                            </div>
                         </div>
-                        <div class="pet-detail">
-                            <p id="pet-breed"></p>
+                        <div class="bigbox">
+                            <div class="pet-detail">
+                                <p class="detail-title">Breed</p>
+                                <p id="pet-breed"></p>
+                            </div>
                         </div>
-                        <div class="pet-detail">
-                            <p id="pet-location"></p>
+                        <div class="bigbox">
+                            <div class="pet-detail">
+                                <p class="detail-title">Location</p>
+                                <p id="pet-location"></p>
+                            </div>
                         </div>
                     </div>
-                    <p></p>
-                    <p class="pet-adoption-status">Adoption status <em id="pet-adoption-status"></em></p>
-                    <a href="" id="pet-whatsapp">WhatsApp</a>
+                    <p class="pet-adoption-status"><b>Adoption status:</b> <em id="pet-adoption-status"></em></p>                    
+                    <div class="box-center">
+                        <a href="" id="pet-whatsapp" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                    </div>                
 				</div>
             </section>
-            <div id="button-before">Atrás</div>
-            <div id="button-next">Siguiente</div>
 		</main>
 		<!--===== MAIN JS =====-->
 		<script src="js/main.js"></script>
