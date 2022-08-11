@@ -1,74 +1,62 @@
 [
-  {
-    "type": "dog",
-    "name": "Max",
-    "age": "1 year",
-    "breed": "Mixed",
-    "location": "Manizales",
-    "status": "Available",
-    "whatsapp": "+51950302674",
-    "photos": [
-      "https://iili.io/USZuat.md.jpg"
-    ]
-  },
-  {
-    "type": "cat",
-    "name": "Michael",
-    "age": "1 year",
-    "breed": "Mixed",
-    "location": "Manizales",
-    "status": "Available",
-    "whatsapp": "+51950302674",
-    "photos": [
-      "https://iili.io/USZqua.md.png"
-    ]
-  },
-  {
-    "type": "dog",
-    "name": "Rex",
-    "age": "8 years",
-    "breed": "Mixed",
-    "location": "Bogotá",
-    "status": "Available",
-    "whatsapp": "+51950302674",
-    "photos": [
-      "https://iili.io/USZKyg.md.png"
-    ]
-  },
-  {
-    "type": "cat",
-    "name": "Copo",
-    "age": "8 years",
-    "breed": "Mixed",
-    "location": "Bogotá",
-    "status": "Available",
-    "whatsapp": "+51950302674",
-    "photos": [
-      "https://iili.io/USZ0Ml.md.png"
-    ]
-  },
-  {
-    "type": "Apollo",
-    "name": "Max",
-    "age": "2 years",
-    "breed": "Jack Rusell",
-    "location": "Medellín",
-    "status": "Available",
-    "whatsapp": "+51950302674",
-    "photos": [
-      "https://iili.io/USZatf.md.jpg"
-    ]
-  },
-  {
-    "type": "Luna",
-    "name": "Max",
-    "age": "2 years",
-    "breed": "Mixed",
-    "location": "Medllín",
-    "status": "Available",
-    "whatsapp": "+51950302674",
-    "photos": [
-      "https://iili.io/USZBwJ.png"
-    ]
-  }
+	{
+		"type": "dog",
+		"name": "Max",
+		"age": "1 year",
+		"breed": "Mixed",
+		"location": "Manizales",
+		"status": "Available",
+		"whatsapp": "51950302674",
+		"photos": ["https://iili.io/USZuat.md.jpg"]
+	},
+	{
+		"type": "cat",
+		"name": "Michael",
+		"age": "1 year",
+		"breed": "Mixed",
+		"location": "Manizales",
+		"status": "Available",
+		"whatsapp": "51950302674",
+		"photos": ["https://iili.io/USZqua.md.png"]
+	},
+	{
+		"type": "dog",
+		"name": "Rex",
+		"age": "8 years",
+		"breed": "Mixed",
+		"location": "Bogotá",
+		"status": "Available",
+		"whatsapp": "51950302674",
+		"photos": ["https://iili.io/USZKyg.md.png"]
+	},
+	{
+		"type": "cat",
+		"name": "Copo",
+		"age": "8 years",
+		"breed": "Mixed",
+		"location": "Bogotá",
+		"status": "Available",
+		"whatsapp": "51950302674",
+		"photos": ["https://iili.io/USZ0Ml.md.png"]
+	},
+	{
+		"type": "dog",
+		"name": "Apollo",
+		"age": "2 years",
+		"breed": "Jack Rusell",
+		"location": "Medellín",
+		"status": "Available",
+		"whatsapp": "51950302674",
+		"photos": ["https://iili.io/USZatf.md.jpg"]
+	},
+	{
+		"type": "cat",
+		"name": "Luna",
+		"age": "2 years",
+		"breed": "Mixed",
+		"location": "Medellín",
+		"status": "Available",
+		"whatsapp": "51950302674",
+		"photos": ["https://iili.io/USZBwJ.png"]
+	}
 ]
