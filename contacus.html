@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<<<<<<< Updated upstream
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,4 +13,176 @@
 
 </body>
 
+=======
+    <title>Contact us</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Estilos propios-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="images/icons8-impresión-de-la-pata-del-perro-24.png" type="image/x-icon" />
+
+    <!-- ===== Fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- ===== BOX ICONS ===== -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <style>
+        form>input,
+        form>textarea,
+        form>label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contactus_title {
+            font-size: var(--big-font-size);
+            line-height: 140%;
+            margin-bottom: var(--mb-1);
+        }
+
+        .contactus {
+            padding: 3.5rem 0 2rem;
+        }
+
+        .contactus_container {
+            position: relative;
+            row-gap: 2rem;
+        }
+
+        .container {
+            max-width: 968px;
+            margin-left: var(--mb-1-5);
+            margin-right: var(--mb-1-5);
+        }
+
+        .grid {
+            display: grid;
+        }
+    </style>
+
+    <!-- Contact Form Here -->
+    <script>
+        window.onload = function () {
+
+            var form = document.getElementById("contact");
+            form.addEventListener('submit', contact_submit, false);
+
+            function contact_submit(e) {
+                // Stop Form From Submitting
+                e.preventDefault();
+
+                // Set Initial Variables
+                var target = e.target || e.srcElement;
+                var to = 'caro.lara@me.com';
+                var uri = 'mailto:' + to;
+                var body = '';
+
+                // Set Form Values to Variables
+                var name = target.elements['name'].value;
+                var subject = target.elements['subject'].value;
+                var phone = target.elements['phone'].value;
+                var message = target.elements['message'].value;
+
+                // Build Body / Message with all Input Fields
+                body += message + "\r\n\r\n";
+                body += "Name: " + name + "\r\n";
+                body += "Phone Number: " + phone + "\r\n";
+
+                // Build final Mailto URI
+                uri += '?subject=' + encodeURIComponent(subject);
+                uri += '&body=' + encodeURIComponent(body);
+
+                // Open Mailto in New Window / Tab
+                window.open(uri, '_blank');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="bx bxs-home-heart"></i>Shelter-pet
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="adoption.html" class="nav__link">All</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="adoption.html?type=dog" class="nav__link">Dogs</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="adoption.html?type=cat" class="nav__link">Cats</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#adopted" class="nav__link">Adopted</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#addPets" class="nav__link">Add Pets</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#login" class="nav__link">Login</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#signup" class="nav__link">Signup</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="faq.html" class="nav__link">FAQ</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="uil uil-times"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <!-- <i class="uil uil-moon" id="theme-button"></i>  -->
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="contactus" id="contactus">
+            <div class="contactus_container container grid">
+                <h1 class="contactus_title">
+                    Contact us
+                </h1>
+                <form id="contact" name="contact" enctype="text/plain">
+                    <label>Name</label>
+                    <input type="text" name="name" />
+                    <label>Subject</label>
+                    <input type="text" name="subject" />
+                    <label>Phone Number</label>
+                    <input type="text" name="phone" />
+                    <label>Message</label>
+                    <textarea name="message"></textarea>
+                    <input type="submit" name="send" value="Send Message" />
+                </form>
+            </div>
+        </section>
+    </main>
+    <!--===== MAIN JS =====-->
+    <script src="js/main.js"></script>
+</body>
+
+>>>>>>> Stashed changes
 </html>
