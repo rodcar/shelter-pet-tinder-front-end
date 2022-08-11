@@ -2,14 +2,120 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelter Pet Tinder - Adoption</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Estilos propios-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/adoption.css" />
+    <link
+        rel="shortcut icon"
+        href="images/icon.ico"
+        type="image/x-icon"
+    />
+    
+    <!-- ===== Fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    />
+    <!-- ===== BOX ICONS ===== -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+        rel="stylesheet"
+        href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <title>Shelter-pet App - Adoption</title>
 </head>
 
 <body>
+		<!--=============== HEADER ===============-->
+		<header class="header" id="header">
+			<nav class="nav container">
+				<a href="#" class="nav__logo">
+					<i class="bx bxs-home-heart"></i>Shelter-pet
+				</a>
 
+				<div class="nav__menu" id="nav-menu">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#home" class="nav__link active-link">Home</a>
+						</li>
+						<li class="nav__item">
+							<a href="#all" class="nav__link">All</a>
+						</li>
+						<li class="nav__item">
+							<a href="#Dogs" class="nav__link">Dogs</a>
+						</li>
+						<li class="nav__item">
+							<a href="#cats" class="nav__link">Cats</a>
+						</li>
+						<li class="nav__item">
+							<a href="#adopted" class="nav__link">Adopted</a>
+						</li>
+						<li class="nav__item">
+							<a href="#addPets" class="nav__link">Add Pets</a>
+						</li>
+						<li class="nav__item">
+							<a href="#login" class="nav__link">Login</a>
+						</li>
+						<li class="nav__item">
+							<a href="#signup" class="nav__link">Signup</a>
+						</li>
+					</ul>
+
+					<div class="nav__close" id="nav-close">
+						<i class="uil uil-times"></i>
+					</div>
+				</div>
+
+				<div class="nav__btns">
+					<!-- Theme change button -->
+					<!-- <i class="uil uil-moon" id="theme-button"></i>  -->
+
+					<div class="nav__toggle" id="nav-toggle">
+						<i class="uil uil-bars"></i>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+        <main class="main">
+			<!--==================== HOME ====================-->
+			<section class="home" id="home">
+				<div class="home__container container grid">
+                    <img src="" alt="" class="pet-carousel" id="pet-carousel-adopted">
+                    <p class="pet-name" id="pet-name-adopted">Pet's Name</p>
+                    <div class="pet-info">
+                        <div class="pet-detail">
+                            <p id="pet-age"></p>
+                        </div>
+                        <div class="pet-detail">
+                            <p id="pet-breed"></p>
+                        </div>
+                        <div class="pet-detail">
+                            <p id="pet-location"></p>
+                        </div>
+                    </div>
+                    <p></p>
+                    <p class="pet-adoption-status">Adoption status <em id="pet-adoption-status"></em></p>
+                    <a href="" id="pet-whatsapp">WhatsApp</a>
+				</div>
+            </section>
+            <div id="button-before">Atrás</div>
+            <div id="button-next">Siguiente</div>
+		</main>
+		<!--===== MAIN JS =====-->
+		<script src="js/main.js"></script>
+        <script src="js/adoption.js"></script>
 </body>
 
 </html>

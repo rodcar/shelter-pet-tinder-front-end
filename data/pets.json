@@ -6,7 +6,7 @@
     "breed": "Mixed",
     "location": "Manizales",
     "status": "Available",
-    "whatsapp": "+51950302674",
+    "whatsapp": "51950302674",
     "photos": [
       "https://iili.io/USZuat.md.jpg"
     ]
@@ -18,7 +18,7 @@
     "breed": "Mixed",
     "location": "Manizales",
     "status": "Available",
-    "whatsapp": "+51950302674",
+    "whatsapp": "51950302674",
     "photos": [
       "https://iili.io/USZqua.md.png"
     ]
@@ -30,7 +30,7 @@
     "breed": "Mixed",
     "location": "Bogotá",
     "status": "Available",
-    "whatsapp": "+51950302674",
+    "whatsapp": "51950302674",
     "photos": [
       "https://iili.io/USZKyg.md.png"
     ]
@@ -42,31 +42,31 @@
     "breed": "Mixed",
     "location": "Bogotá",
     "status": "Available",
-    "whatsapp": "+51950302674",
+    "whatsapp": "51950302674",
     "photos": [
       "https://iili.io/USZ0Ml.md.png"
     ]
   },
   {
-    "type": "Apollo",
-    "name": "Max",
+    "type": "dog",
+    "name": "Apollo",
     "age": "2 years",
     "breed": "Jack Rusell",
     "location": "Medellín",
     "status": "Available",
-    "whatsapp": "+51950302674",
+    "whatsapp": "51950302674",
     "photos": [
       "https://iili.io/USZatf.md.jpg"
     ]
   },
   {
-    "type": "Luna",
-    "name": "Max",
+    "type": "cat",
+    "name": "Luna",
     "age": "2 years",
     "breed": "Mixed",
     "location": "Medllín",
     "status": "Available",
-    "whatsapp": "+51950302674",
+    "whatsapp": "51950302674",
     "photos": [
       "https://iili.io/USZBwJ.png"
     ]
