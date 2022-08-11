@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     // load the first pet
-    fetch('../data/pets.json').then(response => {
+    fetch('./data/pets.json').then(response => {
         return response.json();
     }).then(jsonData => {
         petsData = jsonData;
