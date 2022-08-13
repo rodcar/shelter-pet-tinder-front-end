@@ -12,7 +12,7 @@
 			href="images/icons8-impresión-de-la-pata-del-perro-24.png"
 			type="image/x-icon"
 		/>
-		
+
 		<!-- ===== Fonts ===== -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,8 +37,8 @@
 		<!--=============== HEADER ===============-->
 		<header class="header" id="header">
 			<nav class="nav container">
-				<a href="#" class="nav__logo">
-					<i class="bx bxs-home-heart"></i>Shelter-pet
+				<a href="index.html" class="nav__logo">
+					<i class="bx bxs-home-heart nav__logo-icon"></i>Shelter-pet
 				</a>
 
 				<div class="nav__menu" id="nav-menu">
@@ -62,10 +62,16 @@
 							<a href="#addPets" class="nav__link">Add Pets</a>
 						</li>
 						<li class="nav__item">
-							<a href="#login" class="nav__link">Login</a>
+							<a href="login.html" class="nav__link">Login</a>
 						</li>
 						<li class="nav__item">
-							<a href="#signup" class="nav__link">Signup</a>
+							<a href="signup.html" class="nav__link">SignUp</a>
+						</li>
+						<li class="nav__item">
+							<a href="contacus.html" class="nav__link">Contact Us</a>
+						</li>
+						<li class="nav__item">
+							<a href="faq.html" class="nav__link">FAQ</a>
 						</li>
 					</ul>
 
@@ -89,19 +95,86 @@
 			<!--==================== HOME ====================-->
 			<section class="home" id="home">
 				<div class="home__container container grid">
-					<img src="images/pexels-sergio-souza-3198004.jpg" alt="" class="home__img">
+					<img src="images/header.png" alt="" class="home__img" />
 					<div class="home__data">
 						<h1 class="home__title">
-							Pets will make <br> your life better
+							Pets will make <br />
+							your life better
 						</h1>
 						<p class="home__description">
-							Adopting a pet is more than just taking on responsibility. It is learning to love and care about someone else. Having a pet makes us less selfish and teaches us to give our best, for the good of another being.
+							Adopting a pet is more than just taking on responsibility. It is
+							learning to love and care about someone else. Having a pet makes
+							us less selfish and teaches us to give our best, for the good of
+							another being.
 						</p>
-						<a href="contacus.html" class="button button--flex">
-							Contact Us<i class="uil uil-arrow-down-right button__icon"></i>
+						<a href="adoption.html" class="button button--flex">
+							Find your pet<i class="uil uil-arrow-down-right button__icon"></i>
 						</a>
 					</div>
+
+					<div class="home__social">
+						<span class="home__social-follow">Follow Us</span>
+
+						<div class="home__social-links">
+							<a
+								href="https://www.facebook.com/"
+								target="_blank"
+								class="home__social-link"
+							>
+								<i class="uil uil-facebook-f"></i>
+							</a>
+							<a
+								href="https://www.instagram.com/"
+								target="_blank"
+								class="home__social-link"
+							>
+								<i class="uil uil-instagram"></i>
+							</a>
+							<a
+								href="https://twitter.com/"
+								target="_blank"
+								class="home__social-link"
+							>
+								<i class="uil uil-twitter"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
+		<br>
+
+		<!--==================== FOOTER ====================-->
+		<footer class="footer section">
+			<div class="footer__container container grid">
+				<h2 class="footer__title">🐶Contact Us🐾</h2>
+				<p class="footer__subtitle">It is always generous to open your heart to give a pet a home.</p>
+				<ul class="footer__social">
+					<li>
+						<a
+						class="footer__social-link"
+						href="contacus.html"
+						target="_blank"
+						><i class="uil uil-envelope-send"></i>
+					</a>
+				</li>
+				<li>
+					<a
+						class="footer__social-link"
+						href="https://api.whatsapp.com/send?51950302674&text=Hi!+I%27m+interesed+in+adopting+a+Pet&type=phone_number&app_absent=0"
+						id="pet-whatsapp"
+						target="_blank"
+					><i class="uil uil-whatsapp"></i>
+				</li>
+				</ul>
+				<div class="footer__rights">
+					<span class="footer__copy">
+						&#169; Shelter-pet | Team 1. All rigths reserved
+					</span>
+				</div>
+			</div>
+		</footer>
+
 		<!--===== MAIN JS =====-->
 		<script src="js/main.js"></script>
 	</body>

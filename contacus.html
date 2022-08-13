@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-        <title>Contact us</title>
+		<title>Contact us</title>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
 			href="images/icons8-impresión-de-la-pata-del-perro-24.png"
 			type="image/x-icon"
 		/>
-		
+
 		<!-- ===== Fonts ===== -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,78 +32,79 @@
 			rel="stylesheet"
 			href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
 		/>
-        <style>
-            form > input, form > textarea, form > label {
-                display: block;
-                margin-bottom: 5px;
-            }
-            .contactus_title {
-	            font-size: var(--big-font-size);
-	            line-height: 140%;
-	            margin-bottom: var(--mb-1);
-            }
-            .contactus {
-                padding: 3.5rem 0 2rem;
-            }
+		<style>
+			form > input,
+			form > textarea,
+			form > label {
+				display: block;
+				margin-bottom: 5px;
+			}
+			.contactus_title {
+				font-size: var(--big-font-size);
+				line-height: 140%;
+				margin-bottom: var(--mb-1);
+			}
+			.contactus {
+				padding: 3.5rem 0 2rem;
+			}
 
-            .contactus_container {
-                position: relative;
-                row-gap: 2rem;
-            }
-            .container {
-                max-width: 968px;
-                margin-left: var(--mb-1-5);
-                margin-right: var(--mb-1-5);
-            }
+			.contactus_container {
+				position: relative;
+				row-gap: 2rem;
+			}
+			.container {
+				max-width: 968px;
+				margin-left: var(--mb-1-5);
+				margin-right: var(--mb-1-5);
+			}
 
-            .grid {
-                display: grid;
-            }
-            </style>
-            
-            <!-- Contact Form Here -->
-            <script>
-            window.onload=function(){
-            
-                var form = document.getElementById("contact");
-                form.addEventListener('submit',contact_submit,false);
-            
-                function contact_submit(e) {
-                    // Stop Form From Submitting
-                    e.preventDefault();
-            
-                    // Set Initial Variables
-                    var target = e.target || e.srcElement;
-                    var to = 'caro.lara@me.com';
-                    var uri = 'mailto:' + to;
-                    var body = '';
-            
-                    // Set Form Values to Variables
-                    var name = target.elements['name'].value;
-                    var subject = target.elements['subject'].value;
-                    var phone = target.elements['phone'].value;
-                    var message = target.elements['message'].value;
-            
-                    // Build Body / Message with all Input Fields
-                    body += message + "\r\n\r\n";
-                    body += "Name: " + name + "\r\n";
-                    body += "Phone Number: " + phone + "\r\n";
-            
-                    // Build final Mailto URI
-                    uri += '?subject=' + encodeURIComponent(subject);
-                    uri += '&body=' + encodeURIComponent(body);
-            
-                    // Open Mailto in New Window / Tab
-                    window.open(uri,'_blank');
-                }
-            }
-            </script>    
+			.grid {
+				display: grid;
+			}
+		</style>
+
+		<!-- Contact Form Here -->
+		<script>
+			window.onload = function () {
+				var form = document.getElementById("contact");
+				form.addEventListener("submit", contact_submit, false);
+
+				function contact_submit(e) {
+					// Stop Form From Submitting
+					e.preventDefault();
+
+					// Set Initial Variables
+					var target = e.target || e.srcElement;
+					var to = "caro.lara@me.com";
+					var uri = "mailto:" + to;
+					var body = "";
+
+					// Set Form Values to Variables
+					var name = target.elements["name"].value;
+					var subject = target.elements["subject"].value;
+					var phone = target.elements["phone"].value;
+					var message = target.elements["message"].value;
+
+					// Build Body / Message with all Input Fields
+					body += message + "\r\n\r\n";
+					body += "Name: " + name + "\r\n";
+					body += "Phone Number: " + phone + "\r\n";
+
+					// Build final Mailto URI
+					uri += "?subject=" + encodeURIComponent(subject);
+					uri += "&body=" + encodeURIComponent(body);
+
+					// Open Mailto in New Window / Tab
+					window.open(uri, "_blank");
+				}
+			};
+		</script>
 	</head>
 	<body>
 		<!--=============== HEADER ===============-->
 		<header class="header" id="header">
 			<nav class="nav container">
-				<a href="#" class="nav__logo">
+				<a href="index.html" class="nav__logo">
 					<i class="bx bxs-home-heart"></i>Shelter-pet
 				</a>
 
@@ -154,22 +155,20 @@
 		<main class="main">
 			<section class="contactus" id="contactus">
 				<div class="contactus_container container grid">
-                    <h1 class="contactus_title">
-                        Contact us
-                    </h1>
-                    <form id="contact" name="contact" enctype="text/plain">
-                        <label>Name</label>
-                        <input type="text" name="name" />
-                        <label>Subject</label>
-                        <input type="text" name="subject" />
-                        <label>Phone Number</label>
-                        <input type="text" name="phone" />
-                        <label>Message</label>
-                        <textarea name="message"></textarea>
-                        <input type="submit" name="send" value="Send Message" />
-                    </form>
-                </div>
-            </section>    
+					<h1 class="contactus_title">Contact us</h1>
+					<form id="contact" name="contact" enctype="text/plain">
+						<label>Name</label>
+						<input type="text" name="name" />
+						<label>Subject</label>
+						<input type="text" name="subject" />
+						<label>Phone Number</label>
+						<input type="text" name="phone" />
+						<label>Message</label>
+						<textarea name="message"></textarea>
+						<input type="submit" name="send" value="Send Message" />
+					</form>
+				</div>
+			</section>
 		</main>
 		<!--===== MAIN JS =====-->
 		<script src="js/main.js"></script>
