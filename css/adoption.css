@@ -1,6 +1,14 @@
+i{
+    cursor: pointer;
+}
+
 .adoption__container {
 	position: relative;
 	row-gap: 1rem;
+}
+
+.pet-carousel-container {
+    margin: auto
 }
 
 .pet-carousel {
@@ -10,6 +18,7 @@
 .pet-name {
     font-size: x-large;
     font-weight: bold;
+    text-align: center;
 }
 
 .bigbox{
@@ -38,11 +47,12 @@
     font-weight: bold;
 }
 
-#pet-adoption-status {
+.pet-adoption-status {
     font-style: normal;
     padding-bottom: 0;
     margin-bottom: 0;
     display: inline;
+    text-align: center;
 }
 
 #pet-whatsapp {

@@ -5,6 +5,10 @@ html{
     font-family: 'Poppins', sans-serif;
 }
 
+main {
+    margin-top: 5rem;
+}
+
 h1 {
     text-align: center;
 }
