@@ -517,3 +517,9 @@ img {
 		font-size: 1.15rem;
 	}
 }
+
+em.white {
+	color: transparent;  
+	text-shadow: 0 0 0 white;
+	font-style: normal;
+}
