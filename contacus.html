@@ -7,10 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Estilos propios-->
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="shortcut icon" href="images/icons8-impresión-de-la-pata-del-perro-24.png" type="image/x-icon" />
-
+    
     <!-- ===== Fonts ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,46 +16,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
     <!-- ===== BOX ICONS ===== -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <style>
-        form>input,
-        form>textarea,
-        form>label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .contactus_title {
-            font-size: var(--big-font-size);
-            line-height: 140%;
-            margin-bottom: var(--mb-1);
-        }
-
-        .contactus {
-            padding: 3.5rem 0 2rem;
-        }
-
-        .contactus_container {
-            position: relative;
-            row-gap: 2rem;
-        }
-
-        .container {
-            max-width: 968px;
-            margin-left: var(--mb-1-5);
-            margin-right: var(--mb-1-5);
-        }
-
-        .grid {
-            display: grid;
-        }
-    </style>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> 
+    
+    <!--Estilos propios-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="images/icons8-impresión-de-la-pata-del-perro-24.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/contactus.css" />
 
     <!-- Contact Form Here -->
     <script>
         window.onload = function () {
             var form = document.getElementById("contact");
-            form.addEventListener("submit", contact_submit, false);
+            form.addEventListener("submit", contact_submit);
 
             function contact_submit(e) {
                 // Stop Form From Submitting
@@ -152,15 +121,33 @@
             <div class="contactus_container container grid">
                 <h1 class="contactus_title">Contact us</h1>
                 <form id="contact" name="contact" enctype="text/plain">
-                    <label>Name</label>
-                    <input type="text" name="name" />
-                    <label>Subject</label>
-                    <input type="text" name="subject" />
-                    <label>Phone Number</label>
-                    <input type="text" name="phone" />
-                    <label>Message</label>
-                    <textarea name="message"></textarea>
-                    <input type="submit" name="send" value="Send Message" />
+                    <div class="input-container">
+                        <label>Name</label>
+                        <input type="text" name="name" />
+                    </div>
+                    <div class="input-container">
+                        <label>Subject</label>
+                        <input type="text" name="subject" />
+                    </div>
+                    <div class="input-container">
+                        <label>Mobile</label>
+                        <input type="text" name="phone" />
+                    </div>
+                    <div class="input-container">
+                        <label>Message</label>
+                        <textarea name="message"></textarea>
+                    </div>
+                    <!-- <input type="submit" name="send" value="Send Message" /> -->
+                    
+                    <div class="submit-container">
+                        <button class="faq-contactUs-button" type="submit">
+                           <!-- <a href="contacus.html">Send Message</a> -->
+                           <span>Send Message</span>
+                           <i class="uil uil-envelope button__icon"></i>
+                       </button> 
+                    </div>
+
+
                 </form>
             </div>
         </section>
