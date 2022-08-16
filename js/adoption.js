@@ -49,6 +49,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
             petsData = jsonData;
         } else {
             petsData = jsonData.filter(pet => pet.type == petType);
+
+            // changes the active link on the navigation bar
+            const navItems = document.querySelectorAll('.nav__link');
+            
+            navItems[1].classList.remove('active-link');
+
+            if (petType == 'dog') {
+                navItems[2].classList.add('active-link');
+            } else if (petType == 'cat') {
+                navItems[3].classList.add('active-link');
+            }      
         }
         loadPet(petIndex);
     });
