@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         petBreedElement.innerHTML = currentPet['breed'];
         petLocationElement.innerHTML = currentPet['location'];
         petAdoptionStatusElement.innerHTML = currentPet['status'];
-        petWhatsAppElement.href = 'https://wa.me/' + currentPet['whatsapp'] + '?text=Hi%20I\'m%20interesed%20in%20adopting%20' + currentPet['name'];
+        petWhatsAppElement.href = 'https://wa.me/' + currentPet['whatsapp'] + '?text=Hi%20I\'m%20interested%20in%20adopting%20' + currentPet['name'];
     }
 
     function changeIndex(i) {
