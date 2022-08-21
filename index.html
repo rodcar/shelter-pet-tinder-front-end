@@ -1,151 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--Estilos propios-->
+		<link rel="stylesheet" href="css/main.css" />
+		<link
+			rel="shortcut icon"
+			href="images/icons8-impresión-de-la-pata-del-perro-24.png"
+			type="image/x-icon"
+		/>
 
-    <!--Estilos propios-->
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="shortcut icon" href="images/icons8-impresión-de-la-pata-del-perro-24.png" type="image/x-icon" />
+		<!-- ===== Fonts ===== -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- ===== BOX ICONS ===== -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+		/>
+		<title>Shelter-pet - Home</title>
+	</head>
 
-    <!-- ===== Fonts ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-    <!-- ===== BOX ICONS ===== -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <title>Shelter-pet - Home</title>
-</head>
+	<body>
+		<!--=============== HEADER ===============-->
+		<header class="header" id="header">
+			<nav class="nav container">
+				<a href="index.html" class="nav__logo">
+					<i class="bx bxs-home-heart nav__logo-icon"></i>Shelter-pet
+				</a>
 
-<body>
-    <!--=============== HEADER ===============-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="index.html" class="nav__logo">
-                <i class="bx bxs-home-heart nav__logo-icon"></i>Shelter-pet
-            </a>
+				<div class="nav__menu" id="nav-menu">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="index.html" class="nav__link active-link">Home</a>
+						</li>
+						<li class="nav__item">
+							<a href="adoption.html" class="nav__link">All</a>
+						</li>
+						<li class="nav__item">
+							<a href="adoption.html?type=dog" class="nav__link">Dogs</a>
+						</li>
+						<li class="nav__item">
+							<a href="adoption.html?type=cat" class="nav__link">Cats</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Submit a pet</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Login</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Sign Up</a>
+						</li>
+						<li class="nav__item">
+							<a href="contactus.html" class="nav__link">Contact Us</a>
+						</li>
+						<li class="nav__item">
+							<a href="faq.html" class="nav__link">FAQ</a>
+						</li>
+					</ul>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="index.html" class="nav__link active-link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="adoption.html" class="nav__link">All</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="adoption.html?type=dog" class="nav__link">Dogs</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="adoption.html?type=cat" class="nav__link">Cats</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Submit a pet</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Login</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Sign Up</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="contactus.html" class="nav__link">Contact Us</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="faq.html" class="nav__link">FAQ</a>
-                    </li>
-                </ul>
+					<div class="nav__close" id="nav-close">
+						<i class="uil uil-times"></i>
+					</div>
+				</div>
 
-                <div class="nav__close" id="nav-close">
-                    <i class="uil uil-times"></i>
-                </div>
-            </div>
+				<div class="nav__btns">
+					<!-- Theme change button -->
+					<!-- <i class="uil uil-moon" id="theme-button"></i>  -->
 
-            <div class="nav__btns">
-                <!-- Theme change button -->
-                <!-- <i class="uil uil-moon" id="theme-button"></i>  -->
+					<div class="nav__toggle" id="nav-toggle">
+						<i class="uil uil-bars"></i>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-bars"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
+		<main class="main">
+			<!--==================== HOME ====================-->
+			<section class="home" id="home">
+				<div class="home__container container grid">
+					<img src="images/header.png" alt="" class="home__img" />
+					<div class="home__data">
+						<h1 class="home__title">
+							Pets will make <br />
+							your life better
+						</h1>
+						<p class="home__description">
+							Adopting a pet is more than just taking on responsibility. It is
+							learning to love and care about someone else. Having a pet makes
+							us less selfish and teaches us to give our best, for the good of
+							another being.
+						</p>
+						<a href="adoption.html" class="button button--flex">
+							Find your pet
+							<i class="uil uil-arrow-down-right button__icon"></i>
+						</a>
+					</div>
 
-    <main class="main">
-        <!--==================== HOME ====================-->
-        <section class="home" id="home">
-            <div class="home__container container grid">
-                <img src="images/header.png" alt="" class="home__img" />
-                <div class="home__data">
-                    <h1 class="home__title">
-                        Pets will make <br />
-                        your life better
-                    </h1>
-                    <p class="home__description">
-                        Adopting a pet is more than just taking on responsibility. It is
-                        learning to love and care about someone else. Having a pet makes
-                        us less selfish and teaches us to give our best, for the good of
-                        another being.
-                    </p>
-                    <a href="adoption.html" class="button button--flex">
-                        Find your pet<i class="uil uil-arrow-down-right button__icon"></i>
-                    </a>
-                </div>
+					<div class="home__social">
+						<span class="home__social-follow">Follow Us</span>
 
-                <div class="home__social">
-                    <span class="home__social-follow">Follow Us</span>
+						<div class="home__social-links">
+							<a
+								href="https://www.facebook.com/"
+								target="_blank"
+								class="home__social-link"
+								><i class="uil uil-facebook-f"></i>
+							</a>
+							<a
+								href="https://www.instagram.com/"
+								target="_blank"
+								class="home__social-link"
+								><i class="uil uil-instagram"></i>
+							</a>
+							<a
+								href="https://twitter.com/"
+								target="_blank"
+								class="home__social-link"
+								><i class="uil uil-twitter"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-                    <div class="home__social-links">
-                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
-                            <i class="uil uil-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
-                            <i class="uil uil-instagram"></i>
-                        </a>
-                        <a href="https://twitter.com/" target="_blank" class="home__social-link">
-                            <i class="uil uil-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <br>
+		<!--==================== FOOTER ====================-->
+		<footer class="footer section">
+			<div class="footer__container container">
+				<h2 class="footer__title">
+					🐶Contact Us<em class="white"><i class="bx bxl-baidu"></i></em>
+				</h2>
+				<p class="footer__subtitle">
+					It is always generous to open your heart to give a pet a home.
+				</p>
+				<ul class="footer__social">
+					<li>
+						<a class="footer__social-link" href="contactus.html"
+							><i class="uil uil-envelope-send"></i>
+						</a>
+					</li>
+					<li>
+						<a
+							class="footer__social-link"
+							href="https://wa.me/51950302674?text=Hi%20I'm%20interesed%20in%20adopting"
+							id="pet-whatsapp"
+							target="_blank"
+							><i class="uil uil-whatsapp"></i>
+						</a>
+					</li>
+				</ul>
 
-    <!--==================== FOOTER ====================-->
-    <footer class="footer section">
-        <div class="footer__container container grid">
-            <h2 class="footer__title">🐶Contact Us<em class="white">🐾</em></h2>
-            <p class="footer__subtitle">It is always generous to open your heart to give a pet a home.</p>
-            <ul class="footer__social">
-                <li>
-                    <a class="footer__social-link" href="contactus.html"><i
-                            class="uil uil-envelope-send"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="footer__social-link"
-                        href="https://wa.me/51950302674?text=Hi%20I'm%20interesed%20in%20adopting"
-                        id="pet-whatsapp"><i class="uil uil-whatsapp"></i>
-                    </a>
-                </li>
-            </ul>
-            <div class="footer__rights">
-                <span class="footer__copy">
-                    &#169; Shelter-pet | Team 1. All rigths reserved
-                </span>
-            </div>
-        </div>
-    </footer>
+				<div class="footer__donate">
+					<button class="button button--flex footer__button">
+						Donate <i class="bx bx-donate-heart button__icon"></i>
+					</button>
+				</div>
 
-    <!--===== MAIN JS =====-->
-    <script src="js/main.js"></script>
-</body>
+				<div class="footer__rights">
+					<span class="footer__copy">
+						&#169; Shelter-pet | Team 1. All rigths reserved
+					</span>
+				</div>
+			</div>
+		</footer>
 
+		<!--===== MAIN JS =====-->
+		<script src="js/main.js"></script>
+	</body>
 </html>
