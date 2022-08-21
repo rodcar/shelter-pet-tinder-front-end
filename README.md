@@ -6,7 +6,7 @@ This is our ESL Bootcamp project.
 
 Our project is about a pet adoption application.🐾
 
-<img align="center" width="45%"   alt="" src="https://i.postimg.cc/9Mm5m3Mz/Shelter-pet-app.jpg" />
+<img align="center" width="20%"   alt="" src="https://i.postimg.cc/9Mm5m3Mz/Shelter-pet-app.jpg" />
 
 <br>
 <h3>Languages ​​and tools 👩‍💻</h3>
