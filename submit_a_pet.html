@@ -22,44 +22,6 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" href="images/icons8-impresión-de-la-pata-del-perro-24.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/submit_a_pet.css" />
-
-    <!-- Contact Form Here -->
-    <script>
-        window.onload = function () {
-            var form = document.getElementById("contact");
-            form.addEventListener("submit", contact_submit);
-
-            function contact_submit(e) {
-                // Stop Form From Submitting
-                e.preventDefault();
-
-                // Set Initial Variables
-                var target = e.target || e.srcElement;
-                var to = "caro.lara@me.com";
-                var uri = "mailto:" + to;
-                var body = "";
-
-                // Set Form Values to Variables
-                var name = target.elements["name"].value;
-                var subject = target.elements["subject"].value;
-                var phone = target.elements["phone"].value;
-                var message = target.elements["message"].value;
-
-                // Build Body / Message with all Input Fields
-                body += message + "\r\n\r\n";
-                body += "Name: " + name + "\r\n";
-                body += "Phone Number: " + phone + "\r\n";
-
-                // Build final Mailto URI
-                uri += "?subject=" + encodeURIComponent(subject);
-                uri += "&body=" + encodeURIComponent(body);
-
-                // Open Mailto in New Window / Tab
-                window.open(uri, "_blank");
-                window.open("contactus_answer.html", "_self");
-            }
-        };
-    </script>
 </head>
 
 <body>
@@ -121,42 +83,46 @@
         <section class="submitapet" id="submitapet">
             <div class="submitapet_container container grid">
                 <h1 class="submitapet_title">Submit a pet</h1>
-                <form id="contact" name="contact" enctype="text/plain">
+                <form id="submit-a-pet-form" name="contact" enctype="text/plain">
                     <div class="input-container">
                         <label>Name</label>
-                        <input type="text" name="name" />
+                        <input type="text" name="name" maxlength="50" required/>
                     </div>
                     <div class="input-container">
-                        <label>Address</label>
-                        <input type="text" name="subject" />
+                        <label>Location</label>
+                        <input type="text" name="location" maxlength="10" required/>
                     </div>
                     <div class="input-container">
-                        <label>Phone</label>
-                        <input type="text" name="phone" />
+                        <label>WhatsApp</label>
+                        <input type="text" name="phone" maxlength="50" required/>
                     </div>
                     <div class="input-container">
-                        <label>Date of birth</label>
-                        <input type="text" name="dateofbirth"/>
+                        <label>Type</label>
+                        <select name="type">
+                            <option value="dog" selected>Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="other">Other</option>
+                          </select>
                     </div>
                     <div class="input-container">
                       <label>Pet's name</label>
-                      <input type="text" name="petsname"/>
+                      <input type="text" name="petsname" maxlength="50" required/>
                     </div>
                     <div class="input-container">
                       <label>Pet's age</label>
-                      <input type="text" name="petsage"/>
+                      <input type="text" name="petsage" maxlength="20" required/>
                     </div>
                     <div class="input-container">
                       <label>Breed</label>
-                      <input type="text" name="breed"/>
+                      <input type="text" name="breed" maxlength="20" required/>
                     </div>
                     <div class="input-container">
                       <label>Add a pic</label>
-                      <input type="text" name="addapic"/>
+                      <input type="file" name="addapic" id="addapic"/>
                     </div>
                     <div class="input-container">
                       <label>Bio / info</label>
-                      <textarea name="bioinfo"></textarea>
+                      <textarea name="bioinfo" maxlength="250"></textarea>
                     </div>
                     <div class="checkbox-rect2">
                       <input type="checkbox" id="conditions" name="conditions" value="agree">
@@ -177,6 +143,7 @@
     </main>
     <!--===== MAIN JS =====-->
     <script src="js/main.js"></script>
+    <script src="js/submit_a_pet.js"></script>
 </body>
 
 </html>
