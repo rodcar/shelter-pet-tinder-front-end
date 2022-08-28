@@ -1,0 +1,179 @@
+
+  form>input,
+  form>textarea,
+  form>
+  
+  label {
+      display: block;
+      margin-bottom: 5px;
+  }
+
+  .submitapet_title {
+      font-size: var(--big-font-size);
+      line-height: 140%;
+      margin-bottom: var(--mb-1);
+      text-align: center;
+  }
+
+  .submitapet {
+      padding: 3.5rem 0 2rem;
+  }
+
+  .submitapet_container {
+      position: relative;
+      row-gap: 2rem;
+  }
+
+  .container {
+      max-width: 968px;
+      margin-left: var(--mb-1-5);
+      margin-right: var(--mb-1-5);
+  }
+
+  .grid {
+      display: grid;
+  }
+
+  .submitApet-button {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: .5rem 1.25rem;
+      border-radius: 0.5rem;
+      margin: 1.5rem 0;
+      background-color: #453f65;
+      border: none;
+  }
+
+  .submitApet-button:hover {
+      background-color: #5f578a
+  }
+
+  .submitApet-button span {
+      display: block;
+      padding: 5px 5px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 18px;
+      margin-right: 5px;
+      transition: margin-right .5s linear ;
+  }
+
+  .submitApet-button i {
+      display: block;
+      text-decoration: none;
+      color: white;
+      font-size: 45px;
+      margin-right: 4px;
+  }
+
+  .input-container {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .input-container label {
+      min-width: 98px;
+      margin-right: 22px;
+      font-weight: 700;
+      font-size: 15px;
+  }
+
+  .input-container + .input-container {
+      margin-top: 26px;
+  }
+
+  .input-container input,
+  .input-container textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #453F65;
+  }
+
+  .input-container textarea {
+      min-height: 214px;
+  }
+
+  .input-checkbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*.checkbox-rect2 label {
+    min-width: 98px;
+    margin-left: 22px;
+    font-weight: 700;
+    font-size: 24px;
+}*/
+
+/*.checkbox-rect2 input {
+    width: 40px;
+}*/
+ 
+
+/* checkbox-rect2 */
+.checkbox-rect2 input[type="checkbox"] {
+  display: none;
+}
+.checkbox-rect2 input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  min-width: 98px;
+  font-weight: 700;
+  font-size: 20px;
+
+
+}
+.checkbox-rect2 input[type="checkbox"]:hover + label:hover {
+  color: rgb(23, 86, 228);
+}
+.checkbox-rect2 input[type="checkbox"]:hover + label:before { 
+  border: 1px solid #343a3f;
+  box-shadow: 2px 1px 0 #343a3f;
+}
+.checkbox-rect2 input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
+.checkbox-rect2 input[type="checkbox"] + label:before {
+  content: "";
+  display: block;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid #343a3f;
+  border-radius: 0.2em;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+  transition: all 0.2s, background 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: -2px -1px 0 #343a3f;
+  background: #f3f3f3;
+}
+.checkbox-rect2 input[type="checkbox"]:checked + label:before {
+  border: 2px solid #fff;
+  border-radius: 0.3em;
+  background: #50565a;
+  box-shadow: 2px 1px 0 #50565a;
+}
+
+.submit-container {
+      display: flex;
+      justify-content: center;
+  }
+
+  .submit-container button {
+      min-width: 268px;
+      min-height: 71px;
+
+  }
