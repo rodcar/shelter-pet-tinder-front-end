@@ -41,6 +41,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
     let petType = params.type;
 
+    // it obtains the query parameter 'id'
+    let petId = parseInt(params.id);
+
     // load the first pet
     fetch('https://shelterpet-api.herokuapp.com/pets/').then(response => {
         return response.json();
@@ -61,6 +64,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 navItems[3].classList.add('active-link');
             }      
         }
+        
+        if (petId != null) {
+            petIndex = petsData.findIndex(pet => pet.id === petId);
+        }
+
         loadPet(petIndex);
     });
 
