@@ -57,9 +57,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
             method: 'POST',
             headers: new Headers({'content-type': 'application/json'}),
             body: JSON.stringify(payload)
-        }).then(data => {
-            console.log(data);
-            /*console.log(data.headers['a']);*/
+        }).then(response => {            
+            if (response.status == 201) {
+                window.open("submit_a_pet_post_message.html", "_self");
+            }
+            console.log(response);
         });
     });
 });
