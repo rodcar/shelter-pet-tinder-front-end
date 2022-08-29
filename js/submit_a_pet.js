@@ -12,17 +12,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const submitButton = document.getElementById("submit-a-pet-form");
     const fileInput = document.getElementById("addapic");
 
-    fileInput.addEventListener("change", function({target}){
-        if (target.files && target.files.length) {
-            fileDataURL(target.files[0]).then( data => { 
-                photoUploaded = data; 
-                console.log(data);
-            }).catch(err => console.log(err));
-        }
+    fileInput.addEventListener("change", ev => {
+        const formdata = new FormData()
+        formdata.append("image", ev.target.files[0])
+        fetch("https://api.imgur.com/3/image/", {
+            method: "post",
+            headers: {
+                Authorization: "Client-ID ede26ae6aef60ba"
+            },
+            body: formdata
+        }).then(data => data.json()).then(data => {
+            photoUploaded = data.data.link;
+            console.log(photoUploaded);
+        });
     });
 
     submitButton.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        if (photoUploaded == "") {
+            console.log("The photo is empty");
+            return;
+        }
 
         let dataForm = (e.target || e.srcElement).elements;
         let payload = {
@@ -33,30 +44,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
             name: dataForm['petsname'].value,
             ownersName: dataForm['name'].value,
             phoneNumber: dataForm['petsage'].value,
-            photo: 'null',
+            photo: photoUploaded,
             status: 'Available',
             type: dataForm['type'].value
         };
-
-        if (photoUploaded != "") {
-            let formData = new FormData();
-            formData.append('key', '6d207e02198a847aa98d0a2a901485a5');
-            formData.append('format', 'json');
-            formData.append('source', photoUploaded);
-
-            const myRequest = new Request('https://freeimage.host/api/1/upload', {
-                method: 'POST',
-                body: formData
-            });
-
-            fetch(myRequest)
-            .then((response) => response.json())
-            .then((response) => {
-                console.log(response);
-            });
-        } else {
-            console.log("The photo is empty");
-        }
         console.log(payload);
+
+        //var requestDataForm = new FormData();
+        //requestDataForm.append("json", JSON.stringify(payload));
+
+        fetch("https://shelterpet-api.herokuapp.com/pets/", {
+            method: 'POST',
+            headers: new Headers({'content-type': 'application/json'}),
+            body: JSON.stringify(payload)
+        }).then(data => {
+            console.log(data);
+            /*console.log(data.headers['a']);*/
+        });
     });
 });
