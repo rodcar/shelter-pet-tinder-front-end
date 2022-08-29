@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let petType = params.type;
 
     // load the first pet
-    fetch('https://rodcar.github.io/shelter-pet-tinder-front-end/data/pets.json').then(response => {
+    fetch('https://shelterpet-api.herokuapp.com/pets/').then(response => {
         return response.json();
     }).then(jsonData => {
         if (petType == null) {
