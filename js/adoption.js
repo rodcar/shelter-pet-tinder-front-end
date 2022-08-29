@@ -21,7 +21,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         petBreedElement.innerHTML = currentPet['breed'];
         petLocationElement.innerHTML = currentPet['location'];
         petAdoptionStatusElement.innerHTML = currentPet['status'];
-        petWhatsAppElement.href = 'https://wa.me/' + currentPet['whatsapp'] + '?text=Hi%20I\'m%20interested%20in%20adopting%20' + currentPet['name'];
+        //petWhatsAppElement.href = 'https://wa.me/' + currentPet['whatsapp'] + '?text=Hi%20I\'m%20interested%20in%20adopting%20' + currentPet['name'];
+        petWhatsAppElement.href = `https://api.whatsapp.com/send?text=Hi! I'm interested in adopting ${currentPet['name']} - http://127.0.0.1:5500/adoption.html?id=${currentPet['id']}`
+
+        petWhatsAppElement.setAttribute("data-action", "share/whatsapp/share")
     }
 
     function changeIndex(i) {
@@ -55,16 +58,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
             // changes the active link on the navigation bar
             const navItems = document.querySelectorAll('.nav__link');
-            
+
             navItems[1].classList.remove('active-link');
 
             if (petType == 'dog') {
                 navItems[2].classList.add('active-link');
             } else if (petType == 'cat') {
                 navItems[3].classList.add('active-link');
-            }      
+            }
         }
-        
+
         if (petId != null) {
             petIndex = petsData.findIndex(pet => pet.id === petId);
         }
@@ -72,11 +75,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         loadPet(petIndex);
     });
 
-    nextButton.onclick = function() {
+    nextButton.onclick = function () {
         changeIndex(1);
     };
 
-    beforeButton.onclick = function() {
+    beforeButton.onclick = function () {
         changeIndex(-1);
     };
 });
