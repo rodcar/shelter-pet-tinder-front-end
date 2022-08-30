@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }      
         }
         
-        if (petId != null) {
+        if (Number.isInteger(petId)) {
             petIndex = petsData.findIndex(pet => pet.id === petId);
         }
 
