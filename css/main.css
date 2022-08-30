@@ -4,12 +4,14 @@
 	/*========== Colors ==========*/
 	/*Color mode HSL(hue, saturation, lightness)*/
 	--hue: 250;
+	--second-hue: 220;
 	--first-color: hsl(var(--hue), 24%, 32%);
+	--first-color-footer: hsl(var(--hue), 66%, 75%);
 	--first-color-alt: hsl(var(--hue), 24%, 28%);
 	--first-color-light: hsl(var(--hue), 24%, 66%);
 	--first-color-lighten: hsl(var(--hue), 24%, 92%);
-	--title-color: hsl(var(--hue), 4%, 15%);
-	--text-color: hsl(var(--hue), 4%, 35%);
+	--title-color: hsl(var(--second-hue), 15%, 15%);
+	--text-color: hsl(var(--second-hue), 8%, 35%);
 	--text-color-light: hsl(var(--hue), 4%, 55%);
 	--body-color: hsl(var(--hue), 0%, 100%);
 	--container-color: #fff;
@@ -104,6 +106,58 @@ img {
 	height: auto;
 }
 
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+	--first-color-dark: hsl(var(--hue), 66%, 71%);
+	--title-color: hsl(var(--second-hue), 15%, 95%);
+	--text-color: hsl(var(--second-hue), 8%, 75%);
+	--body-color: hsl(var(--second-hue), 48%, 8%);
+	--container-color: hsl(var(--second-hue), 32%, 12%);
+}
+
+/*========== Button Dark/Light ==========*/
+.change-theme {
+	color: var(--title-color);
+	font-size: 1.15rem;
+	cursor: pointer;
+}
+
+.nav__btns {
+	display: inline-flex;
+	align-items: center;
+	column-gap: 1rem;
+}
+
+/*========== 
+Color changes in some parts of the website, in dark theme ==========*/
+
+.dark-theme .nav__link:hover {
+	color: var(--first-color-footer);
+}
+.dark-theme .active-link {
+	color: var(--title-color);
+}
+.dark-theme .nav__logo-icon {
+	color: hsl(var(--hue) 66%, 75%);
+}
+.dark-theme .nav__logo:hover {
+	color: var(--first-color-footer);
+}
+.dark-theme .home__social-follow,
+.dark-theme .home__social-link {
+	color: var(--first-color-footer);
+}
+
+.dark-theme .footer__title,
+.dark-theme .footer__social-link,
+.dark-theme .footer__rights {
+	color: var(--title-color);
+}
+.dark-theme .scroll-header {
+	box-shadow: 0 1px 4px hsla(var(--hue), 4%, 4%, 0.3);
+}
+
 /*========== REUSABLE CSS CLASSES==========*/
 .section {
 	padding: 5.5rem 0 1rem;
@@ -189,10 +243,10 @@ img {
 		position: fixed;
 		background-color: var(--container-color);
 		width: 80%;
+		box-shadow: -2px 0 4px hsla(var(--hue), 24%, 15%, 0.1);
 		height: 100%;
 		top: 0;
 		right: -100%;
-		box-shadow: -2px 0 4px hsla(var(--hue), 24%, 15%, 0.1);
 		padding: 4rem 0 0 3rem;
 		border-radius: 1rem 0 0 1rem;
 		transition: 0.3s;
@@ -377,13 +431,32 @@ img {
 	margin-bottom: 20px;
 }
 
+.footer__social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 1.25rem;
+}
+
+.footer__social-link {
+	display: inline-flex;
+	padding: 0.3rem;
+	font-size: 2.5rem;
+	margin-bottom: 1.4rem;
+	transition: 0.3s;
+	color: var(--body-color);
+}
+
+.footer__social-link:hover {
+	color: #c13584;
+}
+
 .footer__donate {
 	display: flex;
 	justify-content: center;
 	padding: 0.75rem;
 	border-radius: 0.5rem;
 }
-
 .footer__button {
 	background-color: #d8bfd8;
 	color: black;
@@ -392,25 +465,6 @@ img {
 .footer__button:hover {
 	color: #c13584;
 }
-.footer__social {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.footer__social-link {
-	display: inline-flex;
-	color: var(--body-color);
-	padding: 0.9rem;
-	font-size: 3rem;
-	margin-bottom: 1.4rem;
-	transition: 0.3s;
-}
-
-.footer__social-link:hover {
-	color: #c13584;
-}
-
 .footer__rights {
 	display: flex;
 	justify-content: center;
@@ -429,6 +483,7 @@ img {
 	background: hsl(var(--hue), 4%, 29%);
 	border-radius: 0.5rem;
 }
+
 /*=============== BREAKPOINTS ===============*/
 /*For small devices*/
 
@@ -460,7 +515,7 @@ img {
 
 	.nav {
 		height: calc(var(--header-height) + 1rem);
-		column-gap: 4rem;
+		column-gap: 3rem;
 	}
 	.nav__toggle,
 	.nav__close {
@@ -468,7 +523,7 @@ img {
 	}
 	.nav__list {
 		flex-direction: row;
-		column-gap: 4rem;
+		column-gap: 1.5rem;
 	}
 	.nav__menu {
 		margin-left: auto;
@@ -511,6 +566,14 @@ img {
 		margin-right: auto;
 	}
 
+	.nav__menu {
+		font-size: 1rem;
+	}
+
+	.nav__list {
+		column-gap: 2rem;
+	}
+
 	.section {
 		padding: 8rem 0 1rem;
 	}
@@ -520,26 +583,33 @@ img {
 	}
 
 	.home {
-		padding: 13rem 0 5rem;
+		padding: 12rem 0 5rem;
 	}
 	.home__img {
-		width: 350px;
+		width: 360px;
 	}
 	.home__description {
 		padding-right: 7rem;
 	}
 
-	.footer__social {
-		font-size: 1.25rem;
+	.footer__social-link {
+		font-size: 3.5rem;
 		padding: 0.4rem;
-		border-radius: 0.5rem;
 	}
 	.footer__copy {
 		margin: 7rem 0 2rem;
 	}
+
+	.footer__donate a {
+		font-size: 1.05rem;
+	}
 }
 
 @media screen and (min-width: 1200px) {
+	.nav__list {
+		column-gap: 3.5rem;
+	}
+
 	.home__social {
 		right: -3rem;
 		row-gap: 4.5rem;
