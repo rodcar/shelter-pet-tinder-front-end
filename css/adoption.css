@@ -85,3 +85,10 @@ i {
 .dark-theme #pet-whatsapp {
 	color: #fff;
 }
+
+#share-pet-link {
+	text-align: center;
+	color: #5f578a;
+	font-size: large;
+	font-weight: bold;
+}

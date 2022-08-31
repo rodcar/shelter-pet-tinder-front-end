@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const petLocationElement = document.getElementById("pet-location");
     const petAdoptionStatusElement = document.getElementById("pet-adoption-status");
     const petWhatsAppElement = document.getElementById("pet-whatsapp");
+    const sharePetWhatsAppElement = document.getElementById("share-pet-link");
 
     const beforeButton = document.getElementById("button-before");
     const nextButton = document.getElementById("button-next");
@@ -21,10 +22,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         petBreedElement.innerHTML = currentPet['breed'];
         petLocationElement.innerHTML = currentPet['location'];
         petAdoptionStatusElement.innerHTML = currentPet['status'];
-        //petWhatsAppElement.href = 'https://wa.me/' + currentPet['whatsapp'] + '?text=Hi%20I\'m%20interested%20in%20adopting%20' + currentPet['name'];
-        petWhatsAppElement.href = `https://api.whatsapp.com/send?text=Hi! I'm interested in adopting ${currentPet['name']} - http://127.0.0.1:5500/adoption.html?id=${currentPet['id']}`
-
-        petWhatsAppElement.setAttribute("data-action", "share/whatsapp/share")
+        petWhatsAppElement.href = 'https://wa.me/' + currentPet['whatsapp'] + '?text=Hi%20I\'m%20interested%20in%20adopting%20' + currentPet['name'];
     }
 
     function changeIndex(i) {
@@ -82,4 +80,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     beforeButton.onclick = function () {
         changeIndex(-1);
     };
+
+    sharePetWhatsAppElement.onclick = function () {
+        sharePetWhatsAppElement.href = `https://wa.me/?text=Check ${petsData[petIndex]['name']} on Shelter-Pet App https://rodcar.github.io/shelter-pet-tinder-front-end/adoption.html?id=${petsData[petIndex]['id']}`
+        sharePetWhatsAppElement.setAttribute("data-action", "share/whatsapp/share")
+    }
 });
