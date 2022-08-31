@@ -67,8 +67,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 navItems[3].classList.add('active-link');
             }
         }
-
-        if (petId != null) {
+        
+        if (Number.isInteger(petId)) {
             petIndex = petsData.findIndex(pet => pet.id === petId);
         }
 
