@@ -184,6 +184,10 @@ img {
 	cursor: pointer;
 }
 
+.cat_section {
+	display: none;
+}
+
 @media screen and (max-width: 767px) {
 	.nav__menu {
 		position: fixed;
@@ -318,6 +322,7 @@ img {
 	transform: translateX(0.25rem);
 }
 
+
 /*=============== BUTTONS ===============*/
 .button {
 	display: inline-block;
@@ -381,6 +386,7 @@ img {
 	display: flex;
 	justify-content: center;
 	padding: 0.75rem;
+	padding-bottom: 0;
 	border-radius: 0.5rem;
 }
 
@@ -418,6 +424,7 @@ img {
 	font-size: var(--smaller-font-size);
 	color: var(--body-color);
 }
+
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
@@ -523,19 +530,25 @@ img {
 		padding: 13rem 0 5rem;
 	}
 	.home__img {
-		width: 350px;
+		width: 500px;
+		margin-right: 5rem;
+		margin-bottom: 9rem;
 	}
 	.home__description {
 		padding-right: 7rem;
 	}
-
+	.cat_section {
+		flex-direction: row-reverse;
+		display: flex;
+	}
+	
 	.footer__social {
 		font-size: 1.25rem;
 		padding: 0.4rem;
 		border-radius: 0.5rem;
 	}
 	.footer__copy {
-		margin: 7rem 0 2rem;
+		margin: 0 0 2rem;
 	}
 }
 
