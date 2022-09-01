@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const petLocationElement = document.getElementById("pet-location");
     const petAdoptionStatusElement = document.getElementById("pet-adoption-status");
     const petWhatsAppElement = document.getElementById("pet-whatsapp");
+    const sharePetWhatsAppElement = document.getElementById("share-pet-link");
 
     const beforeButton = document.getElementById("button-before");
     const nextButton = document.getElementById("button-next");
@@ -41,6 +42,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
     let petType = params.type;
 
+    // it obtains the query parameter 'id'
+    let petId = parseInt(params.id);
+
     // load the first pet
     fetch('https://shelterpet-api.herokuapp.com/pets/').then(response => {
         return response.json();
@@ -52,23 +56,33 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
             // changes the active link on the navigation bar
             const navItems = document.querySelectorAll('.nav__link');
-            
+
             navItems[1].classList.remove('active-link');
 
             if (petType == 'dog') {
                 navItems[2].classList.add('active-link');
             } else if (petType == 'cat') {
                 navItems[3].classList.add('active-link');
-            }      
+            }
         }
+        
+        if (Number.isInteger(petId)) {
+            petIndex = petsData.findIndex(pet => pet.id === petId);
+        }
+
         loadPet(petIndex);
     });
 
-    nextButton.onclick = function() {
+    nextButton.onclick = function () {
         changeIndex(1);
     };
 
-    beforeButton.onclick = function() {
+    beforeButton.onclick = function () {
         changeIndex(-1);
     };
+
+    sharePetWhatsAppElement.onclick = function () {
+        sharePetWhatsAppElement.href = `https://wa.me/?text=Check ${petsData[petIndex]['name']} on Shelter-Pet App https://rodcar.github.io/shelter-pet-tinder-front-end/adoption.html?id=${petsData[petIndex]['id']}`
+        sharePetWhatsAppElement.setAttribute("data-action", "share/whatsapp/share")
+    }
 });

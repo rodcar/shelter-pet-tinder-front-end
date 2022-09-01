@@ -1,99 +1,104 @@
+form > input,
+form > textarea,
+form > label {
+	display: block;
+	margin-bottom: 5px;
+}
 
-  form>input,
-  form>textarea,
-  form>
-  
-  label {
-      display: block;
-      margin-bottom: 5px;
-  }
+.contactus_title {
+	font-size: var(--big-font-size);
+	line-height: 140%;
+	margin-bottom: var(--mb-1);
+	text-align: center;
+}
 
-  .contactus_title {
-      font-size: var(--big-font-size);
-      line-height: 140%;
-      margin-bottom: var(--mb-1);
-      text-align: center;
-  }
+.contactus {
+	padding: 3.5rem 0 2rem;
+}
 
-  .contactus {
-      padding: 3.5rem 0 2rem;
-  }
+.contactus_container {
+	position: relative;
+	row-gap: 2rem;
+}
 
-  .contactus_container {
-      position: relative;
-      row-gap: 2rem;
-  }
-
+.container {
+	max-width: 968px;
+	margin-left: var(--mb-1-5);
+	margin-right: var(--mb-1-5);
+}
   .container {
       max-width: 968px;
   }
+.grid {
+	display: grid;
+}
 
-  .grid {
-      display: grid;
-  }
+.contactUs-button {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 1.25rem;
+	border-radius: 0.5rem;
+	margin: 1.5rem 0;
+	background-color: #453f65;
+	border: none;
+}
 
-  .contactUs-button {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: .5rem 1.25rem;
-      border-radius: 0.5rem;
-      margin: 1.5rem 0;
-      background-color: #453f65;
-      border: none;
-  }
+.contactUs-button:hover {
+	background-color: #5f578a;
+}
 
-  .contactUs-button:hover {
-      background-color: #5f578a
-  }
+.contactUs-button span {
+	display: block;
+	padding: 10px 10px;
+	text-decoration: none;
+	color: white;
+	font-weight: 600;
+	font-size: 20px;
+	margin-right: 5px;
+	transition: margin-right 0.5s linear;
+}
 
-  .contactUs-button span {
-      display: block;
-      padding: 10px 10px;
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      font-size: 20px;
-      margin-right: 5px;
-      transition: margin-right .5s linear ;
-  }
+.contactUs-button i {
+	display: block;
+	text-decoration: none;
+	color: white;
+	font-size: 50px;
+	margin-right: 5px;
+}
 
-  .contactUs-button i {
-      display: block;
-      text-decoration: none;
-      color: white;
-      font-size: 50px;
-      margin-right: 5px;
-  }
+.input-container {
+	display: flex;
+	justify-content: space-between;
+}
 
-  .input-container {
-      display: flex;
-      justify-content: space-between;
-  }
+.input-container label {
+	min-width: 98px;
+	margin-right: 22px;
+	font-weight: 700;
+	font-size: 24px;
+}
 
-  .input-container label {
-      min-width: 98px;
-      margin-right: 22px;
-      font-weight: 700;
-      font-size: 24px;
-  }
+.input-container + .input-container {
+	margin-top: 26px;
+}
 
-  .input-container + .input-container {
-      margin-top: 26px;
-  }
+.input-container input,
+.input-container textarea {
+	width: 100%;
+	border-radius: 10px;
+	border: 2px solid #453f65;
+}
 
-  .input-container input,
-  .input-container textarea {
-      width: 100%;
-      border-radius: 10px;
-      border: 2px solid #453F65;
-  }
+.input-container textarea {
+	min-height: 214px;
+}
 
-  .input-container textarea {
-      min-height: 214px;
-  }
-
+.submit-container {
+	display: flex;
+	justify-content: center;
+}
   .submit-container {
       display: flex;
       justify-content: center;
@@ -215,4 +220,9 @@
     .contactus_container{
         margin: 5% 20%;
     }
+
+.submit-container button {
+	min-width: 268px;
+	min-height: 71px;
 }
+  }

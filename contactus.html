@@ -1,122 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<title>Shelter-pet - Contact Us</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <title>Shelter-pet - Contact Us</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- ===== Fonts ===== -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- ===== BOX ICONS ===== -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
 
-    
-    <!-- ===== Fonts ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-    <!-- ===== BOX ICONS ===== -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> 
-    
-    <!--Estilos propios-->
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="shortcut icon" href="images/icons8-impresión-de-la-pata-del-perro-24.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/contactus.css" />
+		<!--Estilos propios-->
+		<link rel="stylesheet" href="css/main.css" />
+		<link
+			rel="shortcut icon"
+			href="images/icons8-impresión-de-la-pata-del-perro-24.png"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="css/contactus.css" />
 
-    <!-- Contact Form Here -->
-    <script>
-        window.onload = function () {
-            var form = document.getElementById("contact");
-            form.addEventListener("submit", contact_submit);
+		<!-- Contact Form Here -->
+		<script>
+			window.onload = function () {
+				var form = document.getElementById("contact");
+				form.addEventListener("submit", contact_submit);
 
-            function contact_submit(e) {
-                // Stop Form From Submitting
-                e.preventDefault();
+				function contact_submit(e) {
+					// Stop Form From Submitting
+					e.preventDefault();
 
-                // Set Initial Variables
-                var target = e.target || e.srcElement;
-                var to = "caro.lara@me.com";
-                var uri = "mailto:" + to;
-                var body = "";
+					// Set Initial Variables
+					var target = e.target || e.srcElement;
+					var to = "caro.lara@me.com";
+					var uri = "mailto:" + to;
+					var body = "";
 
-                // Set Form Values to Variables
-                var name = target.elements["name"].value;
-                var subject = target.elements["subject"].value;
-                var phone = target.elements["phone"].value;
-                var message = target.elements["message"].value;
+					// Set Form Values to Variables
+					var name = target.elements["name"].value;
+					var subject = target.elements["subject"].value;
+					var phone = target.elements["phone"].value;
+					var message = target.elements["message"].value;
 
-                // Build Body / Message with all Input Fields
-                body += message + "\r\n\r\n";
-                body += "Name: " + name + "\r\n";
-                body += "Phone Number: " + phone + "\r\n";
+					// Build Body / Message with all Input Fields
+					body += message + "\r\n\r\n";
+					body += "Name: " + name + "\r\n";
+					body += "Phone Number: " + phone + "\r\n";
 
-                // Build final Mailto URI
-                uri += "?subject=" + encodeURIComponent(subject);
-                uri += "&body=" + encodeURIComponent(body);
+					// Build final Mailto URI
+					uri += "?subject=" + encodeURIComponent(subject);
+					uri += "&body=" + encodeURIComponent(body);
 
-                // Open Mailto in New Window / Tab
-                window.open(uri, "_blank");
-                window.open("contactus_answer.html", "_self");
-            }
-        };
-    </script>
-</head>
+					// Open Mailto in New Window / Tab
+					window.open(uri, "_blank");
+					window.open("contactus_answer.html", "_self");
+				}
+			};
+		</script>
+	</head>
 
-<body>
-    <!--=============== HEADER ===============-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="index.html" class="nav__logo">
-                <i class="bx bxs-home-heart nav__logo-icon"></i>Shelter-pet
-            </a>
+	<body>
+		<!--=============== HEADER ===============-->
+		<header class="header" id="header">
+			<nav class="nav container">
+				<a href="index.html" class="nav__logo">
+					<i class="bx bxs-home-heart nav__logo-icon"></i>Shelter-pet
+				</a>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="index.html" class="nav__link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="adoption.html" class="nav__link">All</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="adoption.html?type=dog" class="nav__link">Dogs</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="adoption.html?type=cat" class="nav__link">Cats</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="submit_a_pet.html" class="nav__link">Submit a pet</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Login</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Sign Up</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="contactus.html" class="nav__link active-link">Contact Us</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="faq.html" class="nav__link">FAQ</a>
-                    </li>
-                </ul>
+				<div class="nav__menu" id="nav-menu">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="index.html" class="nav__link">Home</a>
+						</li>
+						<li class="nav__item">
+							<a href="adoption.html" class="nav__link">All</a>
+						</li>
+						<li class="nav__item">
+							<a href="adoption.html?type=dog" class="nav__link">Dogs</a>
+						</li>
+						<li class="nav__item">
+							<a href="adoption.html?type=cat" class="nav__link">Cats</a>
+						</li>
+						<li class="nav__item">
+							<a href="submit_a_pet.html" class="nav__link">Submit a pet</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Login</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Sign Up</a>
+						</li>
+						<li class="nav__item">
+							<a href="contactus.html" class="nav__link active-link"
+								>Contact Us</a
+							>
+						</li>
+						<li class="nav__item">
+							<a href="faq.html" class="nav__link">FAQ</a>
+						</li>
+					</ul>
 
-                <div class="nav__close" id="nav-close">
-                    <i class="uil uil-times"></i>
-                </div>
-            </div>
+					<div class="nav__close" id="nav-close">
+						<i class="uil uil-times"></i>
+					</div>
+				</div>
 
-            <div class="nav__btns">
-                <!-- Theme change button -->
-                <!-- <i class="uil uil-moon" id="theme-button"></i>  -->
+				<div class="nav__btns">
+					<!-- Theme change button-->
+					<i class="bx bx-moon change-theme" id="theme-button"></i>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-bars"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
+					<div class="nav__toggle" id="nav-toggle">
+						<i class="uil uil-bars"></i>
+					</div>
+				</div>
+			</nav>
+		</header>
 
+<<<<<<< HEAD
     <main class="main">
         <section class="contactus" id="contactus">
             <div class="contactus_container container grid">
@@ -189,5 +207,43 @@
     <!--===== MAIN JS =====-->
     <script src="js/main.js"></script>
 </body>
+=======
+		<main class="main">
+			<section class="contactus" id="contactus">
+				<div class="contactus_container container grid">
+					<h1 class="contactus_title">Contact us</h1>
+					<form id="contact" name="contact" enctype="text/plain">
+						<div class="input-container">
+							<label>Name</label>
+							<input type="text" name="name" />
+						</div>
+						<div class="input-container">
+							<label>Subject</label>
+							<input type="text" name="subject" />
+						</div>
+						<div class="input-container">
+							<label>Phone</label>
+							<input type="text" name="phone" />
+						</div>
+						<div class="input-container">
+							<label>Message</label>
+							<textarea name="message"></textarea>
+						</div>
+						<!-- <input type="submit" name="send" value="Send Message" /> -->
+>>>>>>> 13b680ca9624fa0368bd59ec130d816a09fe4665
 
+						<div class="submit-container">
+							<button class="contactUs-button" type="submit">
+								<!-- <a href="contacus.html">Send Message</a> -->
+								<span>Send Message</span>
+								<i class="uil uil-envelope button__icon"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+		<!--===== MAIN JS =====-->
+		<script src="js/main.js"></script>
+	</body>
 </html>

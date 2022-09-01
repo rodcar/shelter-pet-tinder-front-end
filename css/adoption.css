@@ -1,5 +1,6 @@
 i {
   cursor: pointer;
+	cursor: pointer;
 }
 
 .adoption__container {
@@ -82,10 +83,84 @@ i {
   z-index: 99;
 }
 
-@media (min-width: 768px) {
-  /* Mis reglas de estilos */
+.pet-carousel {
+	border-radius: 12px;
 }
 
-@media (min-width: 992px) {
-  /* Mis reglas de estilos */
+.pet-name {
+	font-size: x-large;
+	font-weight: bold;
+	text-align: center;
+}
+
+.bigbox {
+	width: 33%;
+	float: left;
+}
+
+.pet-detail {
+	background: #5f578a;
+	width: 90px;
+	height: 90px;
+	padding: 3px;
+	text-align: center;
+	margin: 3px auto;
+	color: white;
+	border-radius: 10px;
+}
+
+#pet-info {
+	width: 100%;
+	overflow: hidden;
+}
+
+.detail-title {
+	padding: 15px 0 2px 0;
+	font-weight: bold;
+}
+
+.pet-adoption-status {
+	font-style: normal;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	display: inline;
+	text-align: center;
+}
+
+#pet-whatsapp {
+	font-size: 72px;
+	color: #5f578a;
+}
+
+.box-center {
+	text-align: center;
+}
+
+#button-before {
+	font-size: 30px;
+	color: #5f578a;
+	position: absolute;
+	left: 5px;
+	top: 90px;
+	z-index: 99;
+}
+
+#button-next {
+	font-size: 30px;
+	color: #5f578a;
+	position: absolute;
+	right: 5px;
+	top: 90px;
+	z-index: 99;
+}
+
+.dark-theme #pet-whatsapp {
+	color: #fff;
+}
+
+#share-pet-link {
+	text-align: center;
+	color: #5f578a;
+	font-size: large;
+	font-weight: bold;
 }
