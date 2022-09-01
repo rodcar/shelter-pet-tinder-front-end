@@ -141,19 +141,19 @@
                 <form id="contact" name="contact" enctype="text/plain">
                     <div class="input-container">
                         <label>Name</label>
-                        <input type="text" name="name" />
+                        <input type="text" name="name" maxlength="20" required/>
                     </div>
                     <div class="input-container">
                         <label>Subject</label>
-                        <input type="text" name="subject" />
+                        <input type="text" name="subject" maxlength="100" required/>
                     </div>
                     <div class="input-container">
                         <label>Phone</label>
-                        <input type="text" name="phone" />
+                        <input type="text" name="phone" maxlength="20"/>
                     </div>
                     <div class="input-container">
                         <label>Message</label>
-                        <textarea name="message"></textarea>
+                        <textarea name="message" maxlength="500" required></textarea>
                     </div>
                     <!-- <input type="submit" name="send" value="Send Message" /> -->
                     
