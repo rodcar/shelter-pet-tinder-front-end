@@ -140,7 +140,7 @@
                       <textarea name="bioinfo" maxlength="250"></textarea>
                     </div>
                     <div class="checkbox-rect2">
-                      <input type="checkbox" id="conditions" name="conditions" value="agree" required>
+                      <input type="checkbox" id="conditions" name="conditions" value="agree" required onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that agree with all the Terms and Conditions' : '');"/>
                       <label for="conditions"> I agree with all terms and conditions</label><br>  
                     </div>
                     <!-- <input type="submit" name="send" value="Send Message" /> -->
