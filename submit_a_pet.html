@@ -113,7 +113,7 @@
                     </div>
                     <div class="input-container select">
                         <label>Type</label>
-                        <select name="type">
+                        <select name="type" required>
                             <option value="dog" selected>Dog</option>
                             <option value="cat">Cat</option>
                             <option value="other">Other</option>
@@ -133,14 +133,14 @@
                     </div>
                     <div class="input-container">
                       <label>Add a pic</label>
-                      <input type="file" name="addapic" id="addapic"/>
+                      <input type="file" name="addapic" id="addapic" required/>
                     </div>
                     <div class="input-container">
                       <label>Bio / info</label>
                       <textarea name="bioinfo" maxlength="250"></textarea>
                     </div>
                     <div class="checkbox-rect2">
-                      <input type="checkbox" id="conditions" name="conditions" value="agree">
+                      <input type="checkbox" id="conditions" name="conditions" value="agree" required>
                       <label for="conditions"> I agree with all terms and conditions</label><br>  
                     </div>
                     <!-- <input type="submit" name="send" value="Send Message" /> -->
