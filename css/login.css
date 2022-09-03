@@ -29,6 +29,7 @@
 ::after {
 	box-sizing: border-box;
 }
+
 body {
 	margin: 0;
 	padding: 0;
@@ -78,7 +79,8 @@ img {
 	height: 368px;
 }
 
-.login__registre {
+.login__registre,
+.login__create {
 	position: absolute;
 	bottom: 1rem;
 	width: 100%;
@@ -88,7 +90,21 @@ img {
 	text-align: center;
 	box-shadow: 0 8px 20px rgba(35, 0, 77, 0.2);
 	animation-duration: 0.4s;
+	animation-name: animate-login;
 }
+
+@keyframes animate-login {
+	0% {
+		transform: scale(1, 1);
+	}
+	50% {
+		transform: scale(1.1, 1.1);
+	}
+	100% {
+		transform: scale(1, 1);
+	}
+}
+
 .login__title {
 	font-size: var(--h1-font-size);
 	margin-bottom: 2rem;
@@ -150,7 +166,8 @@ img {
 }
 
 .login__account,
-.login__signin {
+.login__signin,
+.login__signup {
 	font-weight: 600;
 	font-size: var(--small-font-size);
 }
@@ -158,14 +175,33 @@ img {
 .login__account {
 	color: var(--first-color-dark);
 }
-.login__signin {
+
+.login__signin,
+.login__signup {
 	color: var(--first-color);
 	cursor: pointer;
 }
 
-.change-theme {
-	margin-left: 70%;
+/* .login__social {
+	margin-top: 2rem;
 }
+
+.login__social-icon {
+	font-size: 1.5rem;
+	color: var(--first-color-dark);
+	margin: 0 1.5rem;
+} */
+
+/*Show login*/
+.block {
+	display: block;
+}
+
+/*Hidden login*/
+.none {
+	display: none;
+}
+
 /*========== Color changes in some parts of the website, in dark theme ==========*/
 
 .dark-theme .login__title,
@@ -209,8 +245,16 @@ img {
 		margin-top: 0;
 	}
 
-	.login__registre {
+	.login__registre,
+	.login__create {
 		left: -11rem;
+	}
+
+	.login__registre {
 		bottom: -2rem;
+	}
+
+	.login__create {
+		bottom: -5.5rem;
 	}
 }
