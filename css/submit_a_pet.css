@@ -21,11 +21,11 @@ form > label {
 	row-gap: 2rem;
 }
 
-.container {
+/*.container {
 	max-width: 968px;
 	margin-left: var(--mb-1-5);
 	margin-right: var(--mb-1-5);
-}
+}*/
 
 .grid {
 	display: grid;

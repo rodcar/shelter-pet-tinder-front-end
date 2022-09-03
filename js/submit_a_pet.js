@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             location: dataForm['location'].value,
             name: dataForm['petsname'].value,
             ownersName: dataForm['name'].value,
-            phoneNumber: dataForm['petsage'].value,
+            phoneNumber: dataForm['phone'].value,
             photo: photoUploaded,
             status: 'Available',
             type: dataForm['type'].value

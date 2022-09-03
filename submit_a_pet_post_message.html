@@ -30,6 +30,10 @@
 			rel="stylesheet"
 			href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
 		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
 	</head>
 
 	<body>
@@ -59,12 +63,12 @@
 								>Submit a pet</a
 							>
 						</li>
-						<li class="nav__item">
+						<!--<li class="nav__item">
 							<a href="#" class="nav__link">Login</a>
 						</li>
 						<li class="nav__item">
 							<a href="#" class="nav__link">Sign Up</a>
-						</li>
+						</li>-->
 						<li class="nav__item">
 							<a href="contactus.html" class="nav__link">Contact Us</a>
 						</li>
@@ -79,8 +83,8 @@
 				</div>
 
 				<div class="nav__btns">
-					<!-- Theme change button -->
-					<!-- <i class="uil uil-moon" id="theme-button"></i>  -->
+					<!-- Theme change button-->
+					<i class="bx bx-moon change-theme" id="theme-button"></i>
 
 					<div class="nav__toggle" id="nav-toggle">
 						<i class="uil uil-bars"></i>
@@ -109,12 +113,45 @@
 				<a
 					class="contactUs-button"
 					href="https://www.paypal.com/paypalme/IRodriguezCarranza"
+					target="_blank"
 					>Donate
 					<i class="uil uil-comment-alt-heart button__icon"></i>
 				</a>
 			</div>
 		</main>
-
+      		<!--==================== FOOTER ====================-->
+			  <footer class="footer section">
+				<div class="footer__container container">
+					<h2 class="footer__title">
+						🐶Find your new best friend<em class="white"><i class="bx bxl-baidu"></i></em>
+					</h2>
+					<p class="footer__subtitle">
+						It is always generous to open your heart to give a pet a home.
+					</p>
+					<ul class="footer__social">
+						<li>
+							<a class="footer__social-link" href="contactus.html"
+								><i class="uil uil-envelope-send"></i>
+							</a>
+						</li>
+						<li>
+							<a
+								class="footer__social-link"
+								href="https://wa.me/51950302674?text=Hi%20Shelter%20Pet's%20Team"
+								id="pet-whatsapp"
+								target="_blank"
+								><i class="uil uil-whatsapp"></i>
+							</a>
+						</li>
+					</ul>
+	
+					<div class="footer__rights">
+						<span class="footer__copy">
+							&#169; Shelter-pet | Team 1. All rigths reserved
+						</span>
+					</div>
+				</div>
+			</footer>
 		<!--===== MAIN JS =====-->
 		<script src="js/main.js"></script>
 		<script

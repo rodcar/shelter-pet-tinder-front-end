@@ -21,14 +21,20 @@ form > label {
 	row-gap: 2rem;
 }
 
-.container {
+/*.container {
 	max-width: 968px;
 	margin-left: var(--mb-1-5);
 	margin-right: var(--mb-1-5);
 }
+<<<<<<< HEAD
 .container {
 	max-width: 968px;
 }
+=======
+  .container {
+      max-width: 968px;
+  }*/
+>>>>>>> d8d025bb51764e3a33c07b958665e387f3f717a3
 .grid {
 	display: grid;
 }
