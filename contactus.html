@@ -31,12 +31,12 @@
 
 		<!--Estilos propios-->
 		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/contactus.css" />
 		<link
 			rel="shortcut icon"
 			href="images/icons8-impresión-de-la-pata-del-perro-24.png"
 			type="image/x-icon"
 		/>
-		<link rel="stylesheet" href="css/contactus.css" />
 
 		<!-- Contact Form Here -->
 		<script>
@@ -100,7 +100,7 @@
 							<a href="adoption.html?type=cat" class="nav__link">Cats</a>
 						</li>
 						<li class="nav__item">
-							<a href="submit_a_pet.html" class="nav__link">Submit a pet</a>
+							<a href="#" class="nav__link">Submit a pet</a>
 						</li>
 						<li class="nav__item">
 							<a href="#" class="nav__link">Login</a>
@@ -134,48 +134,69 @@
 			</nav>
 		</header>
 
-<<<<<<< HEAD
-    <main class="main">
-        <section class="contactus" id="contactus">
-            <div class="contactus_container container grid">
-                <h1 class="contactus_title">Contact us</h1>
-                <form id="contact" name="contact" enctype="text/plain">
-                    <div class="input-container">
-                        <label>Name</label>
-                        <input type="text" name="name" />
-                    </div>
-                    <div class="input-container">
-                        <label>Subject</label>
-                        <input type="text" name="subject" />
-                    </div>
-                    <div class="input-container">
-                        <label>Phone</label>
-                        <input type="text" name="phone" />
-                    </div>
-                    <div class="input-container">
-                        <label>Message</label>
-                        <textarea name="message"></textarea>
-                    </div>
-                    <!-- <input type="submit" name="send" value="Send Message" /> -->
-                    
-                    <div class="submit-container">
-                        <button class="contactUs-button" type="submit">
-                           <!-- <a href="contacus.html">Send Message</a> -->
-                           <span>Send Message</span>
-                           <i class="uil uil-envelope button__icon"></i>
-                       </button> 
-                    </div>
+		<main class="main">
+			<section class="contactus" id="contactus">
+				<div class="contactus_container container grid">
+					<h1 class="contactus_title">Contact us</h1>
+					<form id="contact" name="contact" enctype="text/plain">
+						<div class="input-container">
+							<label>Name</label>
+							<input
+								type="text"
+								name="name"
+								id="name"
+								placeholder="Name"
+								required
+							/>
+						</div>
+						<div class="input-container">
+							<label>Subject</label>
+							<input
+								type="text"
+								name="subject"
+								id="subject"
+								placeholder="Subject"
+								required
+							/>
+						</div>
+						<div class="input-container">
+							<label>Phone</label>
+							<input
+								type="text"
+								name="phone"
+								id="phone"
+								placeholder="Your phone"
+								required
+							/>
+						</div>
+						<div class="input-container">
+							<label>Message</label>
+							<textarea
+								name="message"
+								id="message"
+								placeholder="Write your message"
+								required
+							></textarea>
+						</div>
+						<!-- <input type="submit" name="send" value="Send Message" /> -->
 
+						<div class="submit-container">
+							<button class="contactUs-button" type="submit">
+								<!-- <a href="contacus.html">Send Message</a> -->
+								<span>Send Message</span>
+								<i class="uil uil-envelope button__icon"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
 
-                </form>
-            </div>
-        </section>
-    </main>
-    		<!--==================== FOOTER ====================-->
-		<footer class="footer ftsection">
+		<!--==================== FOOTER ====================-->
+		<footer class="footer section">
 			<div class="footer__container container">
 				<h2 class="footer__title">
-					🐶Find your new best friend<em class="white"><i class="bx bxl-baidu"></i></em>
+					🐶Contact Us<em class="white"><i class="bx bxl-baidu"></i></em>
 				</h2>
 				<p class="footer__subtitle">
 					It is always generous to open your heart to give a pet a home.
@@ -197,6 +218,15 @@
 					</li>
 				</ul>
 
+				<div class="footer__donate">
+					<a
+						href="https://www.paypal.com/paypalme/IRodriguezCarranza"
+						class="button button--flex footer__button"
+						target="_blank"
+						>Donate <i class="bx bx-donate-heart button__icon"></i>
+					</a>
+				</div>
+
 				<div class="footer__rights">
 					<span class="footer__copy">
 						&#169; Shelter-pet | Team 1. All rigths reserved
@@ -204,45 +234,6 @@
 				</div>
 			</div>
 		</footer>
-    <!--===== MAIN JS =====-->
-    <script src="js/main.js"></script>
-</body>
-=======
-		<main class="main">
-			<section class="contactus" id="contactus">
-				<div class="contactus_container container grid">
-					<h1 class="contactus_title">Contact us</h1>
-					<form id="contact" name="contact" enctype="text/plain">
-						<div class="input-container">
-							<label>Name</label>
-							<input type="text" name="name" />
-						</div>
-						<div class="input-container">
-							<label>Subject</label>
-							<input type="text" name="subject" />
-						</div>
-						<div class="input-container">
-							<label>Phone</label>
-							<input type="text" name="phone" />
-						</div>
-						<div class="input-container">
-							<label>Message</label>
-							<textarea name="message"></textarea>
-						</div>
-						<!-- <input type="submit" name="send" value="Send Message" /> -->
->>>>>>> 13b680ca9624fa0368bd59ec130d816a09fe4665
-
-						<div class="submit-container">
-							<button class="contactUs-button" type="submit">
-								<!-- <a href="contacus.html">Send Message</a> -->
-								<span>Send Message</span>
-								<i class="uil uil-envelope button__icon"></i>
-							</button>
-						</div>
-					</form>
-				</div>
-			</section>
-		</main>
 		<!--===== MAIN JS =====-->
 		<script src="js/main.js"></script>
 	</body>

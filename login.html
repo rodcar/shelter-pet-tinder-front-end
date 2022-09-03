@@ -4,69 +4,93 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--Estilos propios-->
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="shortcut icon" href="images/user.png" type="image/x-icon" />
+
+		<!-- ===== Fonts ===== -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- ===== BOX ICONS ===== -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
 		<title>Shelter-pet App - Login</title>
 	</head>
 	<body>
-		<main class="main">
-			<section class="contactus" id="contactus">
-				<div class="contactus_container container grid">
-					<h1 class="contactus_title">Login</h1>
+		<main class="login">
+			<section class="login__content">
+				<div class="login__img">
+					<img src="images/Login_pets.jpg" alt="pets" />
 				</div>
-				<!-- <form action="" method="POST" class="formulario__login">
-					<div class="">
-						<label class="" for="usuario"
-							>Escriba su usuario:</label
-						>
-						<input
-							class=""
-							placeholder="Ingrese su usuario"
-							type="text"
-							name="usuario"
-							id="usuario"
-							required
-						/>
-					</div>
-					<div class="">
-						<label class="" for="contraseña"
-							>Escriba su contraseña:</label
-						>
-						<input
-							class="form-control"
-							placeholder="Ingrese su contraseña"
-							type="text"
-							maxlength="10"
-							name="contraseña"
-							id="contraseña"
-							required
-						/>
-					</div>
-					<div class="form-check">
-						<label class="form-check-label" for="connected"
-							>Mantenerme conectado</label
-						>
-						<input
-							class="form-check-input"
-							type="checkbox"
-							name="connected"
-							id="connected"
-						/>
-					</div>
 
-					<div class="">
-						<button type="submit" class="">
-							Iniciar Sesión
-						</button>
-					</div>
-					<div class="">
-						<span
-							><a target="_blank" href="#"
-								>¿Olvidaste la contraseña?</a
-							></span
-						>
-						<br />
-					</div>
-				</form> -->
+				<div class="login__forms">
+					<form action="" method="POST" class="login__registre" id="login-in">
+						<!-- Theme change button-->
+						<i class="bx bx-moon change-theme" id="theme-button"></i>
+						<h1 class="login__title">Welcome</h1>
+
+						<div class="login__box">
+							<i class="bx bx-user login__icon"></i>
+							<input
+								type="text"
+								placeholder="Username"
+								name="username"
+								id="username"
+								class="login__input"
+								required
+							/>
+						</div>
+
+						<div class="login__box">
+							<i class="bx bx-lock-alt login__icon"></i>
+							<input
+								type="password"
+								maxlength="10"
+								name="password"
+								id="password"
+								placeholder="Password"
+								class="login__input"
+								required
+							/>
+						</div>
+
+						<span>
+							<a target="_blank" href="#" class="login__forgot"
+								>Forgot password?</a
+							>
+						</span>
+						<a href="#" class="login__button">Sign In</a>
+
+						<div>
+							<span class="login__account">Don't have an Account?</span>
+							<span class="login__signin" id="sign-up">
+								<a href="signup.html">Sign Up</a>
+							</span>
+						</div>
+					</form>
+				</div>
 			</section>
 		</main>
+
+		<!--===== MAIN JS =====-->
+		<script src="js/main.js"></script>
 	</body>
 </html>

@@ -26,9 +26,9 @@ form > label {
 	margin-left: var(--mb-1-5);
 	margin-right: var(--mb-1-5);
 }
-  .container {
-      max-width: 968px;
-  }
+.container {
+	max-width: 968px;
+}
 .grid {
 	display: grid;
 }
@@ -99,25 +99,26 @@ form > label {
 	display: flex;
 	justify-content: center;
 }
-  .submit-container {
-      display: flex;
-      justify-content: center;
-  }
+.submit-container {
+	display: flex;
+	justify-content: center;
+}
 
-  .submit-container button {
-      min-width: 268px;
-      min-height: 71px;
+.submit-container button {
+	min-width: 268px;
+	min-height: 71px;
+}
 
-  }
+/*========== Color changes in some parts of the website, in dark theme ==========*/
 
 /*=============== FOOTER ===============*/
 .footer {
 	background-color: var(--first-color);
 }
 .ftsection {
-    padding: auto;
-    margin-top: 3rem;
-  }
+	padding: auto;
+	margin-top: 3rem;
+}
 .footer__container {
 	display: flex;
 	flex-direction: column;
@@ -179,7 +180,7 @@ form > label {
 }
 
 .footer__copy {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 /*=============== SCROLL BAR ===============*/
@@ -216,13 +217,13 @@ form > label {
 		width: 400px;
 	}
 }
-  @media (min-width: 768px) {
-    .contactus_container{
-        margin: 5% 20%;
-    }
+@media (min-width: 768px) {
+	.contactus_container {
+		margin: 5% 20%;
+	}
 
-.submit-container button {
-	min-width: 268px;
-	min-height: 71px;
+	.submit-container button {
+		min-width: 268px;
+		min-height: 71px;
+	}
 }
-  }
