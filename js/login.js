@@ -44,6 +44,47 @@ window.addEventListener('DOMContentLoaded', (event) => {
         loginUpForm.style.display = "none";
         loginInForm.style.display = "block";        
     };
+
+    // Sign Up Elements
+    const signUpSubmitButton = document.getElementById("sign-up-submit");
+    const signUpFullNameInput = document.getElementById("sign-up-fullname");
+    const signUpEmailInput = document.getElementById("sign-up-email");
+    const signUpPhoneInput = document.getElementById("sign-up-phone");
+    const signUpPasswordInput = document.getElementById("sign-up-password");
+    
+    signUpSubmitButton.onclick = () => {
+        const payload = {
+            "email": signUpEmailInput.value,
+            "name": signUpFullNameInput.value,
+            "password": signUpPasswordInput.value,
+            "phone": signUpPhoneInput.value
+          };
+
+        fetch("https://shelterpet-api.herokuapp.com/auth/signup", {
+            method: 'POST',
+            headers: new Headers({'content-type': 'application/json'}),
+            body: JSON.stringify(payload)
+        }).then(response => {
+            if (response.status == 200) {
+                window.open("index.html", "_self");
+                return;
+            }
+            return response.json();
+        }).then(data => {            
+            if (data.hasOwnProperty('accessToken')) {
+                // save accessToken into LocalStorage
+                //localStorage.setItem("accessToken", data.accessToken);
+                
+                // redirect to index
+                window.open("index.html", "_self");
+            } else {
+                // show error message
+                console.log(data);
+            }            
+        }).catch(function(err) {
+            console.log(err);
+        });
+    };
 });
 
 /*===== LOGIN SHOW and HIDDEN =====*/
