@@ -31,12 +31,12 @@
 
 		<!--Estilos propios-->
 		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/submit_a_pet.css" />
 		<link
 			rel="shortcut icon"
 			href="images/icons8-impresión-de-la-pata-del-perro-24.png"
 			type="image/x-icon"
 		/>
-		<link rel="stylesheet" href="css/submit_a_pet.css" />
 	</head>
 
 	<body>
@@ -100,44 +100,91 @@
 					<h1 class="submitapet_title">Submit a pet</h1>
 					<form id="submit-a-pet-form" name="contact" enctype="text/plain">
 						<div class="input-container">
-							<label>Name</label>
-							<input type="text" name="name" maxlength="50" required />
+							<label class="contact__form-tag formName">Name</label>
+							<input
+								class="contact__form-input username"
+								type="text"
+								name="name"
+								maxlength="50"
+								required
+							/>
 						</div>
 						<div class="input-container">
-							<label>Location</label>
-							<input type="text" name="location" maxlength="10" required />
+							<label class="contact__form-tag formLocation">Location</label>
+							<input
+								class="contact__form-input location"
+								type="text"
+								name="location"
+								maxlength="10"
+								required
+							/>
 						</div>
 						<div class="input-container">
-							<label>WhatsApp</label>
-							<input type="text" name="phone" maxlength="50" required />
+							<label class="contact__form-tag formWhatsapp">WhatsApp</label>
+							<input
+								class="contact__form-input whatsapp"
+								type="text"
+								name="phone"
+								maxlength="50"
+								required
+							/>
 						</div>
 						<div class="input-container select">
-							<label>Type</label>
-							<select name="type">
-								<option value="dog" selected>Dog</option>
-								<option value="cat">Cat</option>
-								<option value="other">Other</option>
+							<label class="contact__form-tag formType">Type</label>
+							<select class="contact__form-input type" name="type">
+								<option class="contact_form-option" value="dog" selected>
+									Dog
+								</option>
+								<option class="contact_form-option" value="cat">Cat</option>
+								<option class="contact_form-option" value="other">Other</option>
 							</select>
 						</div>
 						<div class="input-container">
-							<label>Pet's name</label>
-							<input type="text" name="petsname" maxlength="50" required />
+							<label class="contact__form-tag formPet's">Pet's name</label>
+							<input
+								class="contact__form-input PetsName"
+								type="text"
+								name="petsname"
+								maxlength="50"
+								required
+							/>
 						</div>
 						<div class="input-container">
-							<label>Pet's age</label>
-							<input type="text" name="petsage" maxlength="20" required />
+							<label class="contact__form-tag formPet'sAge">Pet's age</label>
+							<input
+								class="contact__form-input petsAge"
+								type="text"
+								name="petsage"
+								maxlength="20"
+								required
+							/>
 						</div>
 						<div class="input-container">
-							<label>Breed</label>
-							<input type="text" name="breed" maxlength="20" required />
+							<label class="contact__form-tag formBreed">Breed</label>
+							<input
+								class="contact__form-input breed"
+								type="text"
+								name="breed"
+								maxlength="20"
+								required
+							/>
 						</div>
 						<div class="input-container">
-							<label>Add a pic</label>
-							<input type="file" name="addapic" id="addapic" />
+							<label class="contact__form-tag formAdd">Add a pic</label>
+							<input
+								class="contact__form-input add"
+								type="file"
+								name="addapic"
+								id="addapic"
+							/>
 						</div>
-						<div class="input-container">
-							<label>Bio / info</label>
-							<textarea name="bioinfo" maxlength="250"></textarea>
+						<div class="input-container input-container-area">
+							<label class="contact__form-tag formBio">Bio / info</label>
+							<textarea
+								class="contact__form-input messageuser"
+								name="bioinfo"
+								maxlength="250"
+							></textarea>
 						</div>
 						<div class="checkbox-rect2">
 							<input

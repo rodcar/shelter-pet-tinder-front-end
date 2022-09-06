@@ -69,20 +69,30 @@ form > label {
 .input-container {
 	display: flex;
 	justify-content: space-between;
+	position: relative;
+	margin-bottom: 2rem;
+	height: 4rem;
+	background: none;
 }
-
-.input-container label {
-	min-width: 98px;
-	margin-right: 22px;
-	font-weight: 700;
-	font-size: 15px;
+.contact__form-input {
+	background: none;
+	border: 2px solid #5f578a;
+	border-radius: 0.8rem;
+	position: relative;
+	width: 100%;
+	height: 80%;
+	font-size: 1.14rem;
+	font-family: "Raleway", sans-serif;
+	outline: none;
+	padding: 1rem;
+	z-index: 1;
+	color: hsl(174, 12%, 15%);
 }
-
 .input-container + .input-container {
 	margin-top: 26px;
 }
 
-.input-container input,
+/* .input-container input,
 .input-container textarea {
 	width: 100%;
 	border-radius: 10px;
@@ -91,8 +101,46 @@ form > label {
 
 .input-container textarea {
 	min-height: 214px;
+} */
+.contact__form-tag {
+	position: absolute;
+	left: 1rem;
+	top: -1rem;
+	padding: 0 0.25rem;
+	background-color: hsl(174, 100%, 99%);
+	color: #5f578a;
+	font-size: 1.14rem;
+	transition: 0.2s;
+	z-index: 2;
 }
-
+.contact__form-input:focus + .contact__form-tag {
+	top: -0.4rem;
+	left: 0.8rem;
+	color: #5f578a;
+	font-size: 0.675rem;
+	font-weight: 500;
+	z-index: 10;
+}
+.contact__form-input:not(:placeholder-shown).contact__form-input:not(:focus)
+	+ .contact__form-tag {
+	top: -0.5rem;
+	left: 50%;
+	font-size: 0.675rem;
+	font-weight: 500;
+	z-index: 10;
+	color: hsl(176, 59%, 48%);
+	border-radius: 10px;
+}
+.contact__form-input:focus {
+	border: 1.5px solid rgb(34, 145, 133);
+}
+/*Form textarea*/
+.input-container-area {
+	height: 13rem;
+}
+.input-container-area textarea {
+	resize: none;
+}
 .input-checkbox {
 	display: flex;
 	justify-content: space-between;
@@ -162,27 +210,42 @@ form > label {
 	display: flex;
 	justify-content: center;
 }
-  .submit-container button {
-      min-width: 268px;
-      min-height: 71px;
+.submit-container button {
+	min-width: 268px;
+	min-height: 71px;
+}
 
-  }
-  
 .select {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: flex-start;
-  }
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: flex-start;
+	height: auto;
+}
 
-  /*=============== FOOTER ===============*/
+/*========== Color changes in some parts of the website, in dark theme ==========*/
+.dark-theme .contact__form-tag,
+.dark-theme .contact_form-option {
+	background-color: hsl(220, 48%, 8%);
+	color: var(--title-color);
+}
+.dark-theme .type,
+.dark-theme .contact__form-input {
+	color: var(--title-color);
+}
+
+.dark-theme .checkbox-rect2 input[type="checkbox"]:hover + label:hover {
+	color: rgb(23, 86, 228);
+}
+
+/*=============== FOOTER ===============*/
 .footer {
 	background-color: var(--first-color);
 }
 .ftsection {
-    padding: auto;
-    margin-top: 3rem;
-  }
+	padding: auto;
+	margin-top: 3rem;
+}
 .footer__container {
 	display: flex;
 	flex-direction: column;
@@ -244,20 +307,20 @@ form > label {
 }
 
 .footer__copy {
-    margin-top: 0;
+	margin-top: 0;
 }
-
 
 @media screen and (min-width: 576px) {
 	.footer__donate {
 		width: 400px;
 	}
 }
-  @media (min-width: 768px) {
-    .submitapet_container{
-        margin: 5% 20%;
-    }
-.submit-container button {
-	min-width: 268px;
-	min-height: 71px;
-}}
+@media (min-width: 768px) {
+	.submitapet_container {
+		margin: 5% 20%;
+	}
+	.submit-container button {
+		min-width: 268px;
+		min-height: 71px;
+	}
+}

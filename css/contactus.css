@@ -13,6 +13,8 @@ form > label {
 }
 
 .contactus {
+	display: flex;
+	flex-direction: column;
 	padding: 3.5rem 0 2rem;
 }
 
@@ -20,21 +22,15 @@ form > label {
 	position: relative;
 	row-gap: 2rem;
 }
-
-/*.container {
+.container {
 	max-width: 968px;
 	margin-left: var(--mb-1-5);
 	margin-right: var(--mb-1-5);
 }
-<<<<<<< HEAD
 .container {
 	max-width: 968px;
 }
-=======
-  .container {
-      max-width: 968px;
-  }*/
->>>>>>> d8d025bb51764e3a33c07b958665e387f3f717a3
+
 .grid {
 	display: grid;
 }
@@ -77,30 +73,78 @@ form > label {
 .input-container {
 	display: flex;
 	justify-content: space-between;
+	position: relative;
+	margin-bottom: 2rem;
+	height: 4rem;
+	background: none;
+}
+.contact__form-input {
+	background: none;
+	border: 2px solid #5f578a;
+	border-radius: 0.8rem;
+	position: relative;
+	width: 100%;
+	height: 80%;
+	font-size: 1.14rem;
+	font-family: "Raleway", sans-serif;
+	outline: none;
+	padding: 1rem;
+	z-index: 1;
+	color: hsl(174, 12%, 15%);
 }
 
-.input-container label {
-	min-width: 98px;
-	margin-right: 22px;
-	font-weight: 700;
-	font-size: 24px;
-}
-
-.input-container + .input-container {
+/* .input-container + .input-container {
 	margin-top: 26px;
-}
-
+} */
+/*
 .input-container input,
 .input-container textarea {
 	width: 100%;
 	border-radius: 10px;
 	border: 2px solid #453f65;
+}*/
+
+.contact__form-tag {
+	position: absolute;
+	left: 1rem;
+	top: -1rem;
+	padding: 0 0.25rem;
+	background-color: hsl(174, 100%, 99%);
+	color: #5f578a;
+	font-size: 1.14rem;
+	transition: 0.2s;
+	z-index: 2;
+}
+.contact__form-input:focus + .contact__form-tag {
+	top: -0.4rem;
+	left: 0.8rem;
+	color: #5f578a;
+	font-size: 0.675rem;
+	font-weight: 500;
+	z-index: 10;
+}
+.contact__form-input:not(:placeholder-shown).contact__form-input:not(:focus)
+	+ .contact__form-tag {
+	top: -0.5rem;
+	left: 50%;
+	font-size: 0.675rem;
+	font-weight: 500;
+	z-index: 10;
+	color: hsl(176, 59%, 48%);
+	border-radius: 10px;
+}
+.contact__form-input:focus {
+	border: 1.5px solid rgb(34, 145, 133);
+}
+/*Form textarea*/
+.input-container-area {
+	height: 13rem;
+}
+.input-container-area textarea {
+	resize: none;
 }
 
-.input-container textarea {
-	min-height: 214px;
-}
-
+/*Button*/
 .submit-container {
 	display: flex;
 	justify-content: center;
@@ -116,7 +160,10 @@ form > label {
 }
 
 /*========== Color changes in some parts of the website, in dark theme ==========*/
-
+.dark-theme .contact__form-tag {
+	background-color: hsl(220, 48%, 8%);
+	color: var(--title-color);
+}
 /*=============== FOOTER ===============*/
 .footer {
 	background-color: var(--first-color);
