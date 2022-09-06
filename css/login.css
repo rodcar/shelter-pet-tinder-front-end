@@ -202,6 +202,12 @@ img {
 	display: none;
 }
 
+.error-message {
+	padding-top: 10px;
+	color: #ff4c30;
+	font-weight: bold;
+}
+
 /*========== Color changes in some parts of the website, in dark theme ==========*/
 
 .dark-theme .login__title,

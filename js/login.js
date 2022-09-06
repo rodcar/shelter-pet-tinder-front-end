@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const signInButton = document.getElementById("sign-in-button");
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
+    const errorMessage = document.getElementById("err-message");    
 
     const signUpButton = document.getElementById("sign-up");
     const loginUpForm = document.getElementById("login-up");
@@ -29,6 +30,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 window.open("index.html", "_self");
             } else {
                 // show error message
+                console.log(data);
+                errorMessage.innerText = data.message.replace("Error -> ", "");
             }            
         }).catch(function(err) {
             console.log(err);
