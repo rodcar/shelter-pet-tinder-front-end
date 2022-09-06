@@ -208,6 +208,10 @@ img {
 	font-weight: bold;
 }
 
+.error-focus {
+	border: 3px solid #ff4c30;
+}
+
 /*========== Color changes in some parts of the website, in dark theme ==========*/
 
 .dark-theme .login__title,

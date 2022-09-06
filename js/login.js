@@ -9,7 +9,61 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const loginInForm = document.getElementById("login-in");
     const signInButtonReturn = document.getElementById("sign-in");
 
+    function showErrorMessage(text) {
+        errorMessage.innerText = text;
+    }
+
+    function hideErrorMessage() {
+        errorMessage.innerText = "";
+    }
+
+    function showErrorFocus(e) {
+        e.closest(".login__box").classList.add("error-focus");
+    }
+
+    function hideErrorFocus(e) {
+        e.closest(".login__box").classList.remove("error-focus");
+    }
+
+    function validateEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
     signInButton.onclick = function() {
+        hideErrorMessage();
+        hideErrorFocus(emailInput);
+        hideErrorFocus(passwordInput);
+
+        // validation
+        if (emailInput.value.trim() == "") {
+            emailInput.focus();
+            showErrorFocus(emailInput);
+            showErrorMessage("The email is empty");
+            return;
+        }
+
+        if (!validateEmail(emailInput.value.trim())) {
+            emailInput.focus();
+            showErrorFocus(emailInput);
+            showErrorMessage("It isn't a email");
+            return;            
+        }
+
+        if (passwordInput.value.trim() == "") {
+            passwordInput.focus();
+            showErrorFocus(passwordInput);
+            showErrorMessage("The password is empty");
+            return;
+        }
+
+        if (passwordInput.value.trim().length < 8) {
+            passwordInput.focus();
+            showErrorFocus(passwordInput);
+            showErrorMessage("The password is not valid");
+            return;
+        }
+
         const payload = {
             "email": emailInput.value,
             "password": passwordInput.value
