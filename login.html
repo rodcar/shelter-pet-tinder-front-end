@@ -94,17 +94,17 @@
 
 						<div class="login__box">
 							<i class="bx bx-user login__icon"></i>
-							<input type="text" placeholder="Full Name" class="login__input" id="sign-up-fullname"/>
+							<input type="text" placeholder="Full Name" class="login__input" id="sign-up-fullname" maxlength="50"/>
 						</div>
 
 						<div class="login__box">
 							<i class="bx bx-at login__icon"></i>
-							<input type="text" placeholder="Email" class="login__input" id="sign-up-email"/>
+							<input type="text" placeholder="Email" class="login__input" id="sign-up-email" maxlength="254"/>
 						</div>
 
 						<div class="login__box">
 							<i class="bx bx-phone login__icon"></i>
-							<input type="number" placeholder="Phone" class="login__input" id="sign-up-phone"/>
+							<input type="number" placeholder="Phone" class="login__input" id="sign-up-phone" maxlength="20"/>
 						</div>
 
 						<div class="login__box">
@@ -114,7 +114,12 @@
 								placeholder="Password"
 								class="login__input"
 								id="sign-up-password"
+								maxlength="50"
 							/>
+						</div>
+
+						<div class="error-message">
+							<span id="err-message-sign-up"></span>
 						</div>
 
 						<a href="#" class="login__button" id="sign-up-submit">Sign Up</a>

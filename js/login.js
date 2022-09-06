@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     function showErrorFocus(e) {
+        e.focus();
         e.closest(".login__box").classList.add("error-focus");
     }
 
@@ -37,28 +38,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         // validation
         if (emailInput.value.trim() == "") {
-            emailInput.focus();
             showErrorFocus(emailInput);
             showErrorMessage("The email is empty");
             return;
         }
 
         if (!validateEmail(emailInput.value.trim())) {
-            emailInput.focus();
             showErrorFocus(emailInput);
-            showErrorMessage("It isn't a email");
+            showErrorMessage("The email is not valid");
             return;            
         }
 
         if (passwordInput.value.trim() == "") {
-            passwordInput.focus();
             showErrorFocus(passwordInput);
             showErrorMessage("The password is empty");
             return;
         }
 
         if (passwordInput.value.trim().length < 8) {
-            passwordInput.focus();
             showErrorFocus(passwordInput);
             showErrorMessage("The password is not valid");
             return;
@@ -78,7 +75,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }).then(data => {            
             if (data.hasOwnProperty('accessToken')) {
                 // save accessToken into LocalStorage
-                //localStorage.setItem("accessToken", data.accessToken);
+                localStorage.setItem("accessToken", data.accessToken);
                 
                 // redirect to index
                 window.open("index.html", "_self");
@@ -91,6 +88,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
             console.log(err);
         });
     };
+
+    const errorMessageSignUp = document.getElementById("err-message-sign-up");    
+
+    function showErrorMessageSignUp(text) {
+        errorMessageSignUp.innerText = text;
+    }
+
+    function hideErrorMessageSignUp() {
+        errorMessageSignUp.innerText = "";
+    }
 
     signUpButton.onclick = () => {
         loginUpForm.style.display = "block";
@@ -110,12 +117,71 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const signUpPasswordInput = document.getElementById("sign-up-password");
     
     signUpSubmitButton.onclick = () => {
+        hideErrorMessageSignUp();
+        hideErrorFocus(signUpFullNameInput);
+        hideErrorFocus(signUpEmailInput);
+        hideErrorFocus(signUpPhoneInput);
+        hideErrorFocus(signUpPasswordInput);     
+
+        // validation
+        if (signUpFullNameInput.value.trim() == "") {
+            showErrorFocus(signUpFullNameInput);
+            showErrorMessageSignUp("Full Name is empty");
+            return;
+        }
+
+        if (signUpEmailInput.value.trim() == "") {
+            showErrorFocus(signUpEmailInput);
+            showErrorMessageSignUp("Email is empty");
+            return;
+        }
+        
+        if (!validateEmail(signUpEmailInput.value.trim())) {
+            showErrorFocus(signUpEmailInput);
+            showErrorMessageSignUp("The email is not valid");
+            return;            
+        }
+
+        // check if the email is already registered
+        fetch('https://shelterpet-api.herokuapp.com/auth/exists?' + new URLSearchParams({
+            email: signUpEmailInput.value.trim()
+        })).then((response) => {
+            if (response.ok) {
+                hideErrorFocus(signUpFullNameInput);
+                hideErrorFocus(signUpPhoneInput);
+                hideErrorFocus(signUpPasswordInput); 
+                showErrorFocus(signUpEmailInput);
+                showErrorMessageSignUp("Email is already registered");
+                return;
+            }
+        });
+        
+        if (signUpPhoneInput.value.trim() == "") {
+            showErrorFocus(signUpPhoneInput);
+            showErrorMessageSignUp("The phone Number is empty");
+            return;
+        }
+        
+        if (signUpPasswordInput.value.trim() == "") {
+            showErrorFocus(signUpPasswordInput);
+            showErrorMessageSignUp("The password is empty");
+            return;
+        }
+
+        if (signUpPasswordInput.value.trim().length < 8) {
+            showErrorFocus(signUpPasswordInput);
+            showErrorMessageSignUp("The password must be at least 8 characters long");
+            return;
+        }
+
         const payload = {
             "email": signUpEmailInput.value,
             "name": signUpFullNameInput.value,
             "password": signUpPasswordInput.value,
-            "phone": signUpPhoneInput.value
-          };
+            "phone": signUpPhoneInput.value.replace("+", "")
+        };
+
+        console.log(payload);
 
         fetch("https://shelterpet-api.herokuapp.com/auth/signup", {
             method: 'POST',
@@ -123,21 +189,36 @@ window.addEventListener('DOMContentLoaded', (event) => {
             body: JSON.stringify(payload)
         }).then(response => {
             if (response.status == 200) {
-                window.open("index.html", "_self");
-                return;
+
+                const payload = {
+                    "email": signUpEmailInput.value.trim(),
+                    "password": signUpPasswordInput.value.trim()
+                };
+        
+                fetch("https://shelterpet-api.herokuapp.com/auth/signin", {
+                    method: 'POST',
+                    headers: new Headers({'content-type': 'application/json'}),
+                    body: JSON.stringify(payload)
+                }).then(response => {
+                    return response.json();
+                }).then(data => {            
+                    if (data.hasOwnProperty('accessToken')) {
+                        // save accessToken into LocalStorage
+                        localStorage.setItem("accessToken", data.accessToken);
+                        
+                        // redirect to index
+                        window.open("index.html", "_self");
+                    } else {
+                        // show error message
+                        console.log(data);
+                    }            
+                }).catch(function(err) {
+                    console.log(err);
+                });
             }
             return response.json();
-        }).then(data => {            
-            if (data.hasOwnProperty('accessToken')) {
-                // save accessToken into LocalStorage
-                //localStorage.setItem("accessToken", data.accessToken);
-                
-                // redirect to index
-                window.open("index.html", "_self");
-            } else {
-                // show error message
-                console.log(data);
-            }            
+        }).then(data => {
+                console.log(data);     
         }).catch(function(err) {
             console.log(err);
         });
