@@ -45,15 +45,15 @@
 					<form action="" method="POST" class="login__registre" id="login-in">
 						<!-- Theme change button-->
 						<i class="bx bx-moon change-theme" id="theme-button"></i>
-						<h1 class="login__title">Welcome a Shelter-pet</h1>
+						<h1 class="login__title">Welcome to Shelter-pet</h1>
 
 						<div class="login__box">
-							<i class="bx bx-user login__icon"></i>
+							<i class="bx bx-at login__icon"></i>
 							<input
-								type="text"
-								placeholder="Username"
-								name="username"
-								id="username"
+								type="email"
+								placeholder="Email"
+								name="email"
+								id="email"
 								class="login__input"
 								required
 							/>
@@ -63,7 +63,7 @@
 							<i class="bx bx-lock-alt login__icon"></i>
 							<input
 								type="password"
-								maxlength="10"
+								minlength="8"
 								name="password"
 								id="password"
 								placeholder="Password"
@@ -72,12 +72,15 @@
 							/>
 						</div>
 
+						<div class="error-message">
+							<span id="err-message"></span>
+						</div>
 						<span>
 							<a target="_blank" href="#" class="login__forgot"
 								>Forgot password?</a
 							>
 						</span>
-						<a href="#" class="login__button">Sign In</a>
+						<a href="#" class="login__button" id="sign-in-button">Sign In</a>
 
 						<div>
 							<span class="login__account">Don't have an Account?</span>
@@ -91,17 +94,17 @@
 
 						<div class="login__box">
 							<i class="bx bx-user login__icon"></i>
-							<input type="text" placeholder="Username" class="login__input" />
+							<input type="text" placeholder="Full Name" class="login__input" id="sign-up-fullname" maxlength="50"/>
 						</div>
 
 						<div class="login__box">
 							<i class="bx bx-at login__icon"></i>
-							<input type="text" placeholder="Email" class="login__input" />
+							<input type="text" placeholder="Email" class="login__input" id="sign-up-email" maxlength="254"/>
 						</div>
 
 						<div class="login__box">
 							<i class="bx bx-phone login__icon"></i>
-							<input type="number" placeholder="Phone" class="login__input" />
+							<input type="number" placeholder="Phone" class="login__input" id="sign-up-phone" maxlength="20"/>
 						</div>
 
 						<div class="login__box">
@@ -110,10 +113,16 @@
 								type="password"
 								placeholder="Password"
 								class="login__input"
+								id="sign-up-password"
+								maxlength="50"
 							/>
 						</div>
 
-						<a href="#" class="login__button">Sign Up</a>
+						<div class="error-message">
+							<span id="err-message-sign-up"></span>
+						</div>
+
+						<a href="#" class="login__button" id="sign-up-submit">Sign Up</a>
 
 						<div>
 							<span class="login__account">Already have an Account ?</span>
