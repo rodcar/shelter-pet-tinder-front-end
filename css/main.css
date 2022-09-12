@@ -631,3 +631,7 @@ em.white {
 	text-shadow: 0 0 0 white;
 	font-style: normal;
 }
+
+#logout-nav-item {
+	display: none;
+}

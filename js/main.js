@@ -73,3 +73,24 @@ themeButton.addEventListener("click", () => {
 	localStorage.setItem("selected-theme", getCurrentTheme());
 	localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+/* User Authentication */
+const accessToken = localStorage.getItem("accessToken");
+const logoutNavItem = document.getElementById("logout-nav-item");
+const loginNavItem = document.getElementById("login-nav-item");
+
+// check if the user is athenticated
+if (accessToken) {
+	// hide login navigation item
+	loginNavItem.style.display = "none";
+	// show logout navigation item
+	logoutNavItem.style.display = "block";
+}
+
+logoutNavItem.addEventListener("click", () => {
+	localStorage.removeItem("accessToken");
+	// hide logout navigation item
+	logoutNavItem.style.display = "none";
+	// show login navigation item
+	loginNavItem.style.display = "block";
+});
