@@ -12,7 +12,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const submitButton = document.getElementById("submit-a-pet-form");
     const fileInput = document.getElementById("addapic");
 
+    const pageLoader = document.getElementById("pageloader");
+
     fileInput.addEventListener("change", ev => {
+        //show pageloader
+        pageLoader.style.display = "block";
+
         const formdata = new FormData()
         formdata.append("image", ev.target.files[0])
         fetch("https://api.imgur.com/3/image/", {
@@ -22,6 +27,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             },
             body: formdata
         }).then(data => data.json()).then(data => {
+            // hide pageloader
+            pageLoader.style.display = "none";            
             photoUploaded = data.data.link;
             console.log(photoUploaded);
         });
@@ -34,6 +41,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
             console.log("The photo is empty");
             return;
         }
+
+        //show pageloader
+        pageLoader.style.display = "block";        
 
         let dataForm = (e.target || e.srcElement).elements;
         let payload = {
@@ -59,6 +69,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             body: JSON.stringify(payload)
         }).then(response => {            
             if (response.status == 201) {
+                // hide pageloader
+                pageLoader.style.display = "none";
                 window.open("submit_a_pet_post_message.html", "_self");
             }
             console.log(response);

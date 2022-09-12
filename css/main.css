@@ -654,7 +654,7 @@ em.white {
 }
 
 .custom-loader-centered{
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     margin-top: -50px;
