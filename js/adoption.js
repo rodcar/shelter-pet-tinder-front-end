@@ -14,6 +14,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const beforeButton = document.getElementById("button-before");
     const nextButton = document.getElementById("button-next");
 
+    const pageLoader = document.getElementById("pageloader");
+
     function loadPet(index) {
         const currentPet = petsData[index];
         petCorouselElement.setAttribute('src', currentPet['photos'][0]);
@@ -49,6 +51,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     fetch('https://shelterpet-api.herokuapp.com/pets/').then(response => {
         return response.json();
     }).then(jsonData => {
+        // hide pageloader
+        pageLoader.style.display = "none";
+
         if (petType == null) {
             petsData = jsonData;
         } else {
