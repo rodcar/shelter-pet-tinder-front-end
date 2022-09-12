@@ -22,11 +22,11 @@ form > label {
 	position: relative;
 	row-gap: 2rem;
 }
-.container {
+/*.container {
 	max-width: 968px;
 	margin-left: var(--mb-1-5);
 	margin-right: var(--mb-1-5);
-}
+}*/
 .container {
 	max-width: 968px;
 }
