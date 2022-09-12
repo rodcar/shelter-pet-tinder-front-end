@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const loginUpForm = document.getElementById("login-up");
     const loginInForm = document.getElementById("login-in");
     const signInButtonReturn = document.getElementById("sign-in");
+    const pageLoader = document.getElementById("pageloader");
 
     function showErrorMessage(text) {
         errorMessage.innerText = text;
@@ -31,7 +32,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         return re.test(email);
     }
 
-    signInButton.onclick = function() {
+    signInButton.onclick = function() {      
         hideErrorMessage();
         hideErrorFocus(emailInput);
         hideErrorFocus(passwordInput);
@@ -61,6 +62,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
             return;
         }
 
+        //show pageloader
+        pageLoader.style.display = "block";  
+
         const payload = {
             "email": emailInput.value,
             "password": passwordInput.value
@@ -72,7 +76,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
             body: JSON.stringify(payload)
         }).then(response => {
             return response.json();
-        }).then(data => {            
+        }).then(data => {        
+            //hide pageloader
+            pageLoader.style.display = "none";                
             if (data.hasOwnProperty('accessToken')) {
                 // save accessToken into LocalStorage
                 localStorage.setItem("accessToken", data.accessToken);
@@ -174,6 +180,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
             return;
         }
 
+        //show pageloader
+        pageLoader.style.display = "block";        
+
         const payload = {
             "email": signUpEmailInput.value,
             "name": signUpFullNameInput.value,
@@ -188,6 +197,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             headers: new Headers({'content-type': 'application/json'}),
             body: JSON.stringify(payload)
         }).then(response => {
+            //hide pageloader
+            pageLoader.style.display = "none";            
             if (response.status == 200) {
 
                 const payload = {
@@ -225,4 +236,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
     };
 });
 
-/*===== LOGIN SHOW and HIDDEN =====*/
+
