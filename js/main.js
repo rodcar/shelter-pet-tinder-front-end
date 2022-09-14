@@ -86,11 +86,12 @@ if (accessToken) {
 	// show logout navigation item
 	logoutNavItem.style.display = "block";
 }
-
-logoutNavItem.addEventListener("click", () => {
-	localStorage.removeItem("accessToken");
-	// hide logout navigation item
-	logoutNavItem.style.display = "none";
-	// show login navigation item
-	loginNavItem.style.display = "block";
-});
+if (logoutNavItem) {
+	logoutNavItem.addEventListener("click", () => {
+		localStorage.removeItem("accessToken");
+		// hide logout navigation item
+		logoutNavItem.style.display = "none";
+		// show login navigation item
+		loginNavItem.style.display = "block";
+	});
+}

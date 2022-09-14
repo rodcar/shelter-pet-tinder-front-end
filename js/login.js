@@ -10,6 +10,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const signInButtonReturn = document.getElementById("sign-in");
     const pageLoader = document.getElementById("pageloader");
 
+    // it obtains the query parameter 'type'. example: dog or cat
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    let signupParam = params.signup;
+
+    // if the URL param signup exists then the sign up form appears
+    if (signupParam != null) {
+        loginUpForm.style.display = "block";
+        loginInForm.style.display = "none";
+    }
+
     function showErrorMessage(text) {
         errorMessage.innerText = text;
     }
