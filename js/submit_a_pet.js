@@ -1,13 +1,5 @@
 let photoUploaded = "";
 
-// function that convert a file into base64
-const fileDataURL = file => new Promise((resolve,reject) => {
-    let fr = new FileReader();
-    fr.onload = () => resolve( fr.result);
-    fr.onerror = reject;
-    fr.readAsDataURL(file)
-});
-
 window.addEventListener('DOMContentLoaded', (event) => {
     const submitButton = document.getElementById("submit-a-pet-form");
     const fileInput = document.getElementById("addapic");
