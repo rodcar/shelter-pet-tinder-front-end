@@ -1,11 +1,19 @@
 let photoUploaded = "";
 
 window.addEventListener('DOMContentLoaded', (event) => {
+    const submitAPetSection = document.getElementById("submitapet");
+    const pleaseLoginSection = document.getElementById("please-login");
     const submitButton = document.getElementById("submit-a-pet-form");
     const fileInput = document.getElementById("addapic");
-
     const pageLoader = document.getElementById("pageloader");
 
+    // shows please login in case the user is not signed in
+    const accessToken = localStorage.getItem("accessToken");
+    if (!accessToken) {
+        submitAPetSection.style.display = "none";
+        pleaseLoginSection.style.display = "block";      
+    }
+    
     fileInput.addEventListener("change", ev => {
         //show pageloader
         pageLoader.style.display = "block";
@@ -67,5 +75,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }
             console.log(response);
         });
+    });
+
+    const logoutNavItem = document.getElementById("logout-nav-item");
+
+    logoutNavItem.addEventListener("click", () => {
+        submitAPetSection.style.display = "none";
+        pleaseLoginSection.style.display = "block";     
     });
 });

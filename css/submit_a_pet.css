@@ -324,3 +324,16 @@ form > label {
 		min-height: 71px;
 	}
 }
+
+#please-login {
+	display: none;
+}
+
+#please-login p {
+	text-align: center;
+	font-size: 18px;
+}
+
+#please-login p a{
+	font-weight: bold;
+}
