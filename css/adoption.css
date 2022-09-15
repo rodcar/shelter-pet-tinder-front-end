@@ -164,3 +164,9 @@ i {
 	font-size: large;
 	font-weight: bold;
 }
+
+
+.ri-share-fill {
+	font-size: x-large;
+	vertical-align: sub;
+}
